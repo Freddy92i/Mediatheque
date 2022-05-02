@@ -1,0 +1,61 @@
+.searchbar{
+    display: flex;
+    float:right;
+    position: relative;
+    top: -35px;
+    border-radius: 7px;
+}
+a.ajoutfilm{
+    text-decoration: none;
+    border:1px solid #000;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    height: 45px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.formgenre{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.searchletter{
+    display: flex;
+    justify-content: center;
+    gap:5px;
+}
+.selectcat{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.affifilms{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 95px;
+}
+.affifilms .card-img-top{
+    align-items: center;
+    margin: auto;
+    max-height: 268px;
+}
+.card{
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.col-md-4{
+    height: 300px;
+    text-decoration: none;
+}
+h5.card-title{
+    text-decoration: none;
+    box-shadow: none;
+    color:#000;
+}
+
