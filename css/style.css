@@ -22,6 +22,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.navbar-ul{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 img#log-img{
     margin-right:20px;
     max-height: 20px;
@@ -32,22 +36,32 @@ img#log-img{
 .form-group.card-img-top{
     max-height: 300px;
 }
+/* lougout img */
 
-.formcat{
-    
-}
-
-
+#logout-image{
+    height: 20px;
+    margin-top: 14px;   
+   }
 
 #navbar-hello {
     display: flex;
     align-self: flex-end;
+    color: #cdcdcd;
 }
 
 #navbar-hello > span {
-    padding: 12px 6px;
+    padding: 17px 6px;
     line-height: 1;
 }
+#logo-droite{
+    position: relative;
+    left: 365px;
+    margin-top: -3px;
+}
+
+
+
+
 .affiche-film .card-img-top{
     max-height: 300px;
 }

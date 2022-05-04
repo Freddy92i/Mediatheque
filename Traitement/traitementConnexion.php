@@ -13,7 +13,7 @@ if(empty($_POST['mail']) OR empty($_POST['mdp'])) { // Si un des 2 champs est vi
 } elseif ($req->rowCount() == 1) { // Si le formulaire correspond à une ligne de la base de données information
     $mdp = $_POST['mdp'];
     $hash = $result['mdp'];
-    if(mdp_verify($mdp, $hash)) {
+    if(password_verify($mdp, $hash)) {
         setcookie('id', $result['id'], time() + 3600, '/');
         $_SESSION['message']='Connexion réussie';
         header('location: ../index.php');

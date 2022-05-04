@@ -7,11 +7,16 @@ $query->execute(['id' => $id]);
 $result = $query->fetch();
 $nom = $result[1];
 
-$tab = ['id', 'nom', 'duree', 'resume'];
+$tab = ['id', 'nom', 'duree', 'resume', 'realisateur', 'img', 'categorie'];
 $i = 1;
+
 // faire tous le html et c'est bon ?
-while ($i < 4){
-    echo $tab[$i]. ' : '. $result[$i];
+while ($i < 7){
+    if($tab[$i] == 'img') {
+        echo "<img src=\"$result[$i]\">";
+    } else {
+        echo $tab[$i]. ' : '. $result[$i];
+    }
     echo '<br>';
     $i++;
 }
