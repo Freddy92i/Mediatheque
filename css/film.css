@@ -35,6 +35,7 @@ a.ajoutfilm{
     display: flex;
     flex-wrap: wrap;
     gap: 95px;
+    margin-left: 95px;
 }
 .affifilms .card-img-top{
     align-items: center;
@@ -58,4 +59,9 @@ h5.card-title{
     box-shadow: none;
     color:#000;
 }
-
+/* design présentation Film.php */
+#infosfilm{
+    display: flex;
+    position: relative;
+    background-color: red;
+}

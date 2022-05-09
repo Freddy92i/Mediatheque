@@ -9,7 +9,7 @@
             <div id="logo-droite">
                 <ul class="navbar-ul">
                     <a id="log-btn" href="log.php" ><img id="log-img" title="Se Connecter ou s'inscrire" src="img\id.png">
-                    <!--Connexion &nbsp;/&nbsp; Inscription <span class="sr-only">(current)</span>--></a>
+                    </a>
                  </ul>
             </div>
             <?php if(empty($_COOKIE['id'])) { 

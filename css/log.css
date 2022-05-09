@@ -3,6 +3,12 @@
 	margin: auto;
 }
 
+.alert{
+    height: 0px;
+    text-align: center;
+    color: red;
+
+}
 
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
