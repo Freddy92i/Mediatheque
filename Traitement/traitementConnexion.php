@@ -15,8 +15,8 @@ if(empty($_POST['mail']) OR empty($_POST['mdp'])) { // Si un des 2 champs est vi
     $hash = $result['mdp'];
     if(password_verify($mdp, $hash)) {
         setcookie('id', $result['id'], time() + 3600, '/');
-        $_SESSION['message']='Connexion réussie';
-        header('location: ../index.php');
+        //$_SESSION['message']='Connexion réussie';
+        header('location: cnxsucces.php');
     } else {
         // Création de la session message pour y afficher le message d'erreur
         $_SESSION['message']='Erreur de connexion';

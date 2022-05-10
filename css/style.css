@@ -55,7 +55,6 @@ img#log-img{
 }
 #logo-droite{
     position: relative;
-    left: 365px;
     margin-top: -3px;
 }
 
@@ -181,4 +180,11 @@ h2 .heading{
     background: #e0e0e0;
     box-shadow:  15px 15px 40px #6f6f6f,
              -15px -15px 40px #cdcdcd;
+}
+/* connexion réussie */
+
+.cnxreussie{
+    text-align: center;
+    font-size: 20px;
+    
 }
