@@ -62,8 +62,15 @@
 	margin:0 15px 10px 0;
 	display:inline-block;
 	border-bottom:2px solid transparent;
-	color:#ffffffad
+	color:#ffffffad;
+	transition: all .2s ease-in-out; 
 }
+
+.login-html .tab:hover { 
+    transform: scale(1.1); 
+    }
+
+
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
 	color:rgb(255, 255, 255);
@@ -101,7 +108,7 @@
 	color:#fff;
 	font-size:12px;
 }
-.homelink-signin {
+.homelink-signin{
 	display: flex;
 	color:white;
 	align-items: center;
@@ -109,7 +116,14 @@
 	text-decoration: none;
 	margin-top:20px;
 	gap: 5px;
+	transition: all .2s ease-in-out; 
 }
+
+.homelink-signin:hover { 
+    transform: scale(1.1); 
+    }
+
+
 .homelink-signin a{
 	color:white!important;
 	text-decoration: none;
@@ -135,7 +149,14 @@
 .login-form .group .button{
     padding-top: 20px;
 	background:#3d3d3d;
+    transition: all .2s ease-in-out; 
 }
+
+.login-form .group .button:hover { 
+    transform: scale(1.1); 
+    }
+
+
 .login-form .group label .icon{
 	width:15px;
 	height:15px;

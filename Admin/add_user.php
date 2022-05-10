@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-require('../config.php');
+require('../APP/connexionPDO.php');
 
 if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur 

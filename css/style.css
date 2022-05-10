@@ -1,6 +1,9 @@
 #nav-link{
     max-width: 100px;
 }
+body{
+    background-color: #eff0f0;
+}
 
 .alert{
     height: 0px;
@@ -79,16 +82,23 @@ div.card{
 }
 
 #medialink {
-    width: 200px;
+    width: 220px;
+    height: 30px;
     color: #000000;
     justify-content: center;
+    align-items: center;
     display: flex;
-    margin-top:20px;
-    border-radius: 15px;
-    background: #e0e0e0;
-    box-shadow:  5px 5px 10px #4f4f4f,
-             -10px -10px 10px #ededed;
+    margin-top:30px;
+    border-radius: 50px;
+    background: #eff0f0;
+    box-shadow:  10px 10px 15px #b3b4b4,
+                 -10px -10px 15px #ffffff;
+    transition: all .2s ease-in-out; 
 }
+
+#medialink:hover { 
+    transform: scale(1.1); 
+    }
 
 #suppr{
     position: relative;
@@ -119,7 +129,7 @@ h2 .heading{
 .divider{
     margin-top: 25px;
     margin-bottom: 25px;
-    width: 650px;
+    width: 330px;
 
 }
 .colgauche{
@@ -140,12 +150,12 @@ h2 .heading{
 /* Bloc 1 Presentation */
 .blocpresentation{
     height: 400px;
-    margin-left: 40px;
-    margin-right: 40px;
-    border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow:  15px 15px 40px #6f6f6f,
-             -15px -15px 40px #cdcdcd;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-radius: 50px;
+    background: #eff0f0;
+    box-shadow:  10px 10px 15px #b3b4b4,
+                 -10px -10px 15px #ffffff;
 }
 .lead{
     margin-left: 50px;
@@ -156,12 +166,12 @@ h2 .heading{
 /* Bloc 2 Horraires */
 .blochorraires{
     height: 400px;
-    margin-left: 40px;
-    margin-right: 40px;
-    border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow:  15px 15px 40px #6f6f6f,
-             -15px -15px 40px #cdcdcd;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-radius: 50px;
+    background: #eff0f0;
+    box-shadow:  10px 10px 15px #b3b4b4,
+                 -10px -10px 15px #ffffff;
 }
 
 .imghorraires{
@@ -172,14 +182,13 @@ h2 .heading{
 
 /* Bloc 3 infos pratique */
 .blocinfos{
-    margin-left: 40px;
     height: 400px;
-    margin-left: 40px;
-    margin-right: 40px;
-    border-radius: 30px;
-    background: #e0e0e0;
-    box-shadow:  15px 15px 40px #6f6f6f,
-             -15px -15px 40px #cdcdcd;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-radius: 50px;
+    background: #eff0f0;
+    box-shadow:  10px 10px 15px #b3b4b4,
+                 -10px -10px 15px #ffffff;
 }
 /* connexion réussie */
 
