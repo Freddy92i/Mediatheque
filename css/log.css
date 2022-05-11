@@ -9,6 +9,11 @@
     color: red;
 
 }
+.alertmsg{
+	text-align: center;
+	border-radius: 5px;
+	background-color: red;
+}
 
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}

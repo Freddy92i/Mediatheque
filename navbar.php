@@ -3,7 +3,7 @@
 <!-- <link href="/media/examples/link-element-example.css" rel="stylesheet">-->
 </head>
 <body>
-    <nav style="background-color:#1A1919" >
+    <nav style="background-color:#848484" >
         <div id="navbar" class="collapse navbar-collapse" id="navbarSupportedContent">
            <a href="index.php"><img width="150px" height="50px" src="img\logo.png"></a>
             <div id="logo-droite">

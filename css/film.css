@@ -7,11 +7,13 @@
 }
 a.ajoutfilm{
     text-decoration: none;
-    border:1px solid #000;
-    border-radius: 10px;
-    background-color: antiquewhite;
-    height: 45px;
-    width: 100px;
+    border:1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding-left: 14px;
+    color: #444444;
+    height: 31px;
+    width: 150px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -20,6 +22,18 @@ a.ajoutfilm{
     display: flex;
     text-align: center;
     justify-content: center;
+    align-items: baseline;
+    position: relative;
+    right: 180px;
+    gap: 20px;
+}
+.formcat{
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    gap: 10px;
+    bottom: 39px;
+    left: 240px;
 }
 .searchletter{
     display: flex;
@@ -36,6 +50,7 @@ a.ajoutfilm{
     flex-wrap: wrap;
     gap: 95px;
     margin-left: 95px;
+    margin-bottom: 85px;
 }
 .affifilms .card-img-top{
     align-items: center;

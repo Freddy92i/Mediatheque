@@ -176,15 +176,10 @@ foreach ($result as $film) { ?>
                     </a>
                         </div>
                     </a>
-<!--                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Durée : <?php echo $film['duree']; ?> minutes</li>
-                        <li class="list-group-item">Réalisateur : <?php echo $film['realisateur']; ?></li>
-                        <li class="list-group-item">Genre : <?php echo $film['categorie']; ?></li>
-                    </ul>-->
                     <?php if($user && $user['role'] == 'admin') { ?>
                         <div class="card-body">
-                            <a href="editMovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier</a>
-                            <a href="Traitement/deleteMovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Supprimer</a>
+                            <a href="editMovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier &nbsp;&nbsp;</a>
+                            <a href="Traitement/deleteMovie.php?filmid=<?php echo $film['id']; ?>" class="card-link"> &nbsp;&nbsp;Supprimer</a>
                         </div>
                     <?php } ?>
                 </div>

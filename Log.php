@@ -87,6 +87,10 @@ if(isset($_SESSION['message'])) {
                 	</div>
 				</div>
 				<div class="group">
+					<label for="email" class="label">Email </label>
+					<input id="email" type="email" name="mail" placeholder="Entrer votre mail" class="input">
+				</div>
+				<div class="group">
 					<label for="mdp" class="label">mot de passe</label>
 					<input id="pass" type="password" name="mdp" placeholder="Entrer votre mot de passe" class="input" data-type="password">
 				</div>
@@ -94,10 +98,7 @@ if(isset($_SESSION['message'])) {
 					<label for="mdp2" class="label">Répéter le mot de passe</label>
 					<input id="pass2" type="password" name="mdp2" placeholder="répétez le mot de passe" class="input" data-type="password">
 				</div>
-				<div class="group">
-					<label for="email" class="label">Email </label>
-					<input id="email" type="email" name="mail" placeholder="Entrer votre mail" class="input">
-				</div>
+				
 				<div class="group">
 					<button class="button" type="submit">Inscrivez-vous</button>
 				</div>
@@ -115,44 +116,6 @@ if(isset($_SESSION['message'])) {
 </div>
 </body>
 
-<!--
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Inscription</h5>
-                    <form class="form-signin" method="post" action="Traitement/traitementInscription.php">
-                        <div class="form-label-group">
-                            <label>prénom</label>
-                            <input type="text" name="prenom" class="form-control" placeholder="Entrer votre prénom" required autofocus>
-                        </div>
-                            <label>nom</label>
-                            <input type="text" name="nom" class="form-control" placeholder="Entrer votre nom" required autofocus>
-                        </div>
-                            <label>Adresse email</label>
-                            <input type="email" name="mail" class="form-control" placeholder="Entrer votre adresse mail" required autofocus>
-                        </div>
-
-                        <div class="form-label-group">
-                            <label>Mot de passe</label>
-                            <input type="password" name="mdp" class="form-control" placeholder="Au moins 6 caractères" required>
-                        </div>
-
-                        <div class="form-label-group">
-                            <label>Entrer le mot de passe à nouveau</label>
-                            <input type="password" name="mdp2" class="form-control" required>
-                        </div></br>
-
-                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Inscrivez-vous</button>
-                        
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
 </body>
 </html>
 <?php } ?>
