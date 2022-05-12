@@ -5,7 +5,7 @@
 <body>
 <?php include "navbar.php" ?>
 <head class="body-log">
-    <link rel="stylesheet" href="css/Log.css">
+    <link rel="stylesheet" href="css/log.css">
 </head>
 
 <?php
