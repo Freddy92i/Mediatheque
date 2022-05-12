@@ -4,7 +4,7 @@ if(isset($_COOKIE['id'])) {
     $_SESSION['message']='Vous êtes déjà connecté';
     header('location: ../index.php');
 } else {
-    include "../APP/ConnexionPDO.php";
+    include "../app/connexionpdo.php";
     $mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
     $mdp2 = $_POST['mdp2'];

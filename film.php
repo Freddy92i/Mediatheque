@@ -5,7 +5,7 @@
 <body>
 
 <?php
-include "APP/ConnexionPDO.php";
+include "app/connexionpdo.php";
 
 
 $id = $_GET["id"];
@@ -65,10 +65,9 @@ $affichealt = $result[7]
       </div> <!-- end column2 -->
     </div> <!-- end description -->
       <div class="adminmove">
-          <!--<?php if($user && $user['role'] == 'admin') { ?>
+          <?php if($user && $user['role'] == 'admin') { ?>
             <a href="editmovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier</a>
             <a href="traitement/deletemovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Supprimer</a>
-          -->
       </div>
     </div>
     

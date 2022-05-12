@@ -44,7 +44,7 @@ if(isset($_SESSION['message'])) {
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Se Connecter</label>
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">S'inscrire</label>
 		<div class="login-form">
-        <form class="form-signin" method="post" action="Traitement/traitementConnexion.php">
+        <form class="form-signin" method="post" action="traitement/traitementconnexion.php">
 			<input type="hidden" name="token" value="<?php echo $token; ?>">
 			<div class="sign-in-htm">
 				<div class="group">
@@ -67,7 +67,7 @@ if(isset($_SESSION['message'])) {
 					<a class="forgot" href="#forgot">Vous avez oublié votre mot de passe ?</a>
 				</div>
                 <div class="homelink-signin">
-                    <img class="arrow" src="img\arrowG.png">
+                    <img class="arrow" src="img\arrowg.png">
 					<a class="backhome" href="index.php"> Retour a l'accueil </a>
 				</div>
 			</div>

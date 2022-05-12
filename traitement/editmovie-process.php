@@ -16,7 +16,7 @@ if(empty($_COOKIE['id'])) {
     if (empty($nom) || empty($duree) || empty($resume) || empty($realisateur) || empty($categorie) || empty($image)) {
         // Création de la session message pour y afficher le message d'erreur
         $_SESSION['message'] = 'Un des champs est vide';
-        header('location: ../editMovie.php');
+        header('location: ../editmovie.php');
     } else {
         $req = $bdd->prepare("UPDATE film SET nom = ?, duree = ?, resume = ?, realisateur = ?, RefCat = ?, img = ? WHERE id = '$id'");
         $req->execute(array($nom, $duree, $resume, $realisateur, $categorie, $image));

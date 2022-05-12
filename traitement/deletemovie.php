@@ -16,10 +16,10 @@
                 $statement->execute(array($id));
                 // Création de la session message pour y afficher le message de confirmation
                 $_SESSION['message'] = 'Suppression effectué avec succès';
-                header("Location: ../mediatheque.php");
+                header("location: ../mediatheque.php");
             } else {
                 $_SESSION['message'] = 'Suppression annulée';
-                header("Location: ../mediatheque.php");
+                header("location: ../mediatheque.php");
             }
         } else {
             ?>

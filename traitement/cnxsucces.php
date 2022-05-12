@@ -1,6 +1,6 @@
 <html>
     <header>
-        <!-- A meta tag that redirects after 5 seconds to one of my PHP tutorials-->
+        <!-- A meta tag that redirects after 5 seconds -->
         <meta http-equiv="refresh" content="2;url=../index.php">
         <link>
     </header>

@@ -67,7 +67,7 @@
             </div>
         </form></br>
 <div class="row">
-        <a href="ajoutMovie.php" class="ajoutfilm"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;Ajouter un film</a>
+        <a href="ajoutmovie.php" class="ajoutfilm"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;Ajouter un film</a>
 
     <form class="searchbar" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <input class="form-control " name="search" placeholder="Rechercher...">
@@ -100,7 +100,7 @@
                 <div class="col-md-2">
                     <select class="form-control" name="categorie" id="category">
                             <?php
-                            include "APP/connexionPDO.php";
+                            include "app/connexionpdo.php";
 
                             $query = $bdd->query('SELECT * FROM categorie');
                             $result2 = $query -> fetchAll();
@@ -124,13 +124,13 @@
 
 
 <?php
-include "APP/ConnexionPDO.php";
+include "app/connexionpdo.php";
 if(empty($_POST['search']) AND empty($_POST['tri']) AND empty($_POST['categorie']) AND empty($_POST['alphabet'])) { // Affiche tous les film s'il n'y a pas de recherche
     $test = TRUE;
-    include "Traitement/allMovie.php";
+    include "traitement/allmovie.php";
 } elseif(isset($_POST['search'])) { // Affiche le résultat de la recherche si la recherche n'est pas vide
     $test = TRUE;
-    include "Traitement/searchMovie.php";
+    include "traitement/searchmovie.php";
 } elseif(isset($_POST['tri'])) {
     if($_POST['tri'] == 'titre') {
         $test = TRUE;
@@ -144,11 +144,11 @@ if(empty($_POST['search']) AND empty($_POST['tri']) AND empty($_POST['categorie'
         $result = $query->fetchAll(2);
     } elseif($_POST['tri'] == 'reset') {
         $test = TRUE;
-        include "Traitement/allMovie.php";
+        include "traitement/allmovie.php";
     }
 } elseif(isset($_POST['categorie'])) {
 $test = TRUE;
-include "Traitement/triMovie.php";
+include "traitement/trimovie.php";
 } elseif(isset($_POST['alphabet'])) {
     $test = TRUE;
     $trialphabet = $_POST['alphabet'];
