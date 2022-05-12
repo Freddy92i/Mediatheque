@@ -5,7 +5,7 @@
 <?php
 
     session_start();
-    include('../APP/connexionPDO.php');
+    include('../app/connexionpdo.php');
     if (!empty($_GET['filmid'])) // On récupère l'id du film et on le supprime
     {
         $id = $_GET['filmid'];

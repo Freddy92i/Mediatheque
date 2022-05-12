@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include('../APP/connexionPDO.php');
+include('../app/connexionpdo.php');
 $req = $bdd->prepare('SELECT mail, mdp, id FROM information WHERE mail = :mail');
 $req->execute(array('mail' => $_POST['mail']));
 $result = $req->fetch();
@@ -36,7 +36,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION[ "loggedin"] === true) {
     exit;
 }
 // include config file
-require_once "../APP/connexionPDO.php";
+require_once "../app/connexionpdo.php";
 
 //definir variable et initialiser avec valeur nulle
 $username = $mdp = "";

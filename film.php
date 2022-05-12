@@ -66,8 +66,8 @@ $affichealt = $result[7]
     </div> <!-- end description -->
       <div class="adminmove">
           <!--<?php if($user && $user['role'] == 'admin') { ?>
-            <a href="editMovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier</a>
-            <a href="Traitement/deleteMovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Supprimer</a>
+            <a href="editmovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier</a>
+            <a href="traitement/deletemovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Supprimer</a>
           -->
       </div>
     </div>

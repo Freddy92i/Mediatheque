@@ -73,7 +73,7 @@ if(isset($_SESSION['message'])) {
 			</div>
         </form>
 
-        <form class="form-signup" method="post" action="Traitement/traitementInscription.php">
+        <form class="form-signup" method="post" action="traitement/traitementinscription.php">
 
 			<div class="sign-up-htm">
 				<div class="perso-inputs">
@@ -107,7 +107,7 @@ if(isset($_SESSION['message'])) {
 					<label for="tab-1">Déjà membre ?</a>
 				</div>
                 <div class="homelink-signup">
-                    <img id="arrow" src="img\arrowG.png">
+                    <img id="arrow" src="img\arrowg.png">
 					<a id="backhome"href="index.php" > Retour a l'Accueil </a>
 				</div>
 			</div>

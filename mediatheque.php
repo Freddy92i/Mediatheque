@@ -178,8 +178,8 @@ foreach ($result as $film) { ?>
                     </a>
                     <?php if($user && $user['role'] == 'admin') { ?>
                         <div class="card-body">
-                            <a href="editMovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier &nbsp;&nbsp;</a>
-                            <a href="Traitement/deleteMovie.php?filmid=<?php echo $film['id']; ?>" class="card-link"> &nbsp;&nbsp;Supprimer</a>
+                            <a href="editmovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier &nbsp;&nbsp;</a>
+                            <a href="traitement/deletemovie.php?filmid=<?php echo $film['id']; ?>" class="card-link"> &nbsp;&nbsp;Supprimer</a>
                         </div>
                     <?php } ?>
                 </div>

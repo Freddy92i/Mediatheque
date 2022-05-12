@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="CSS/style.css" />
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 <?php
-require('../APP/connexionPDO.php');
+require('../app/connexionpdo.php');
 
 if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur 
@@ -35,7 +35,6 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUES
 ?>
 <form class="box" action="" method="post">
   <h1 class="box-logo box-title">
-    <a href="https://waytolearnx.com/">WayToLearnX.com</a>
   </h1>
     <h1 class="box-title">Add user</h1>
   <input type="text" class="box-input" name="username" 

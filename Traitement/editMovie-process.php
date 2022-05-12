@@ -3,7 +3,7 @@ if(empty($_COOKIE['id'])) {
     $_SESSION['message']='Veuillez vous inscrire ou vous connecter pour accéder à cette rubrique';
     header('location: ../log.php');
 } else {
-    include "../APP/ConnexionPDO.php";
+    include "../app/connexionpdo.php";
     session_start();
     $id = $_SESSION['filmid'];
     $nom = $_POST['nom'];

@@ -1,6 +1,5 @@
 <head>
 <link rel="stylesheet" href="/css/style.css">
-<!-- <link href="/media/examples/link-element-example.css" rel="stylesheet">-->
 </head>
 <body>
     <nav style="background-color:#848484" >
@@ -15,13 +14,13 @@
             <?php if(empty($_COOKIE['id'])) { 
                  $user = null;
                  } elseif(isset($_COOKIE['id'])) {
-                include("APP/connexionPDO.php");
+                include("app/connexionpdo.php");
                 $id = $_COOKIE['id'];
                 $req = $bdd->prepare('SELECT * FROM information WHERE id= :id');
                 $req-> execute(array('id'=>$id));
                 $user = $req->fetch();
                 echo '<div id="navbar-hello"><span>Bonjour '.$user['prenom'].' !&nbsp;&nbsp;</span>';
-                echo '<a class="logout-img" href="Traitement/traitementDeconnexion.php"> <img id="logout-image" title="se déconnecter" src="img\logout.png"> </a></div>';
+                echo '<a class="logout-img" href="traitement/traitementdeconnexion.php"> <img id="logout-image" title="se déconnecter" src="img\logout.png"> </a></div>';
              } ?>
          </div>
     </nav>

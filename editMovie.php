@@ -26,7 +26,7 @@ if(isset($_SESSION['message'])) {
 }
 ?>
 <?php
-include('APP/connexionPDO.php');
+include('app/connexionpdo.php');
 if(!empty($_GET['filmid']))
 {
     $id = $_GET['filmid'];
@@ -39,7 +39,7 @@ if(!empty($_GET['filmid']))
 
 ?>
 
-<center><form method="post" action="Traitement/editMovie-process.php" style="text-align: center">
+<center><form method="post" action="traitement/editmovie-process.php" style="text-align: center">
     <div class="col-md-4">
         <div class="row">
             <div class="col-md-6">
@@ -75,7 +75,7 @@ if(!empty($_GET['filmid']))
                     <label for="category">Catégorie:</label>
                     <select class="form-control" name="categorie" id="category" name="category">
                         <?php
-                        include "APP/connexionPDO.php";
+                        include "app/connexionpdo.php";
 
                         $query = $bdd->query('SELECT * FROM categorie');
                         $result2 = $query -> fetchAll();
