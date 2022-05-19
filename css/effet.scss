@@ -70,11 +70,13 @@ a:hover {
   
   .title1 {
     font-size: 30px;
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px;
     color: black;
-    z-index: 1;
+    position: relative;
+    top:90px;
+    background: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
   }
     span {
       position: absolute;
