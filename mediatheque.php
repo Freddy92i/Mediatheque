@@ -191,3 +191,4 @@ foreach ($result as $film) { ?>
 
     </body>
 </html>
+<?php include "footer.php" ?>
