@@ -1,7 +1,6 @@
 <html>
     <head>
          <link rel="stylesheet" href="css/effet.scss">
-        <link rel="stylesheet" href="css/style.css">
     </head>
 <body>
 
