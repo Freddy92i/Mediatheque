@@ -62,13 +62,7 @@ a:hover {
   max-width: 215;
   max-height: 290;
 }
-
-.details {
-  
-  padding: 190px 0 0 280px;
-  
-  
-  .title1 {
+.title1 {
     font-size: 30px;
     color: black;
     position: relative;
@@ -80,6 +74,11 @@ a:hover {
     padding-right: 10px;
     border-radius: 5px;
   }
+
+.details {
+  
+  padding: 190px 0 0 280px;
+  
     span {
       position: absolute;
       top: 3px;
