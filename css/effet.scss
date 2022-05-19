@@ -69,11 +69,14 @@ a:hover {
   
   
   .title1 {
-    color: rgb(255, 255, 255);
-    font-size: 65px;
-    margin-bottom: 13px;
-    position: relative;
-    
+    font-size: 30px;
+    padding: 10px;
+    background: whitesmoke;
+    width: 300px;
+    border-radius: 5px;
+    opacity: 75%;
+    color: black;
+  }
     span {
       position: absolute;
       top: 3px;
