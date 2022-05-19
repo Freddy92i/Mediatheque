@@ -40,7 +40,7 @@ $affichealt = $result[7]
             
       <div class="details">
       
-        <div class="title1" style=" font-size: 30px ;  padding: 5px;background: whitesmoke;width: 300px;border-radius: 5px;color: black;"><?php echo $nom ?></div>   
+        <div class="title1" style=" font-size: 30px; color: black;"><?php echo $nom ?></div>   
         
         
       </div> <!-- end details -->
