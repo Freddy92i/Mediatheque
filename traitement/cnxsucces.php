@@ -1,13 +1,23 @@
 <html>
-    <header>
-        <!-- A meta tag that redirects after 5 seconds -->
-        <meta http-equiv="refresh" content="2;url=../index.php">
-        <link>
-    </header>
-    <body>
-        <div class=cnxreussie>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Connexion réussie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="main.js"></script>
+<meta http-equiv="refresh" content="4;url=../index.php">
+  </head>
+  <body>
+  <div class="cnxreussie">
         Connexion réussie, nous allons vous rediriger.
         </div>
-
-    </body>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
 </html>
