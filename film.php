@@ -78,3 +78,4 @@ $affichealt = $result[7]
 </body>
 </html>
 <?php } ?>
+<?php include "footer.php" ?>
