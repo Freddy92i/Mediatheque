@@ -1,12 +1,6 @@
 <?php
-  // Initialiser la session
-  session_start();
-  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
-  if(!isset($_SESSION["username"])){
-    header("location: ../log.php");
-    exit(); 
-  }
-?>
+   if($user && $user['role'] == 'admin') { ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,3 +18,33 @@
     </div>
   </body>
 </html>
+
+<? } 
+else{
+  ?>
+  <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Echec </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="main.js"></script>
+<meta http-equiv="refresh" content="4;url=../index.php">
+  </head>
+  <body>
+  <div class="cnxreussie">
+        Vous n'etes pas admin, nous allons vous rediriger.
+        </div>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+</html>
+<?
+}
+?>
