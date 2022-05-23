@@ -41,6 +41,8 @@ $affichealt = $result[7]
       <div class="details">
       
         <div class="title1" style=" font-size: 30px; color: black;"><?php echo $nom ?></div>   
+
+        <!--<div class="duree" style=" font-size: 30px; color: black;"><?php // echo $duree ?></div>   -->
         
         
       </div> <!-- end details -->

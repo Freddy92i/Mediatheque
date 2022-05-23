@@ -67,8 +67,9 @@
             </div>
         </form></br>
 <div class="row">
+<?php if($user && $user['role'] == 'admin') { ?>
         <a href="ajoutmovie.php" class="ajoutfilm"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;Ajouter un film</a>
-
+    <?php } ?>
     <form class="searchbar" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <input class="form-control " name="search" placeholder="Rechercher...">
     <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
