@@ -64,7 +64,7 @@ $affichealt = $result[7]
         
         <div class="homelink-signup">
           <img id="arrow" src="img\arrowg.png">
-					<a id="backhome"href="Mediatheque.php" > Retour </a>
+					<a id="backhome"href="mediatheque.php" > Retour </a>
 				</div>
         
         <div class="adminmove">
