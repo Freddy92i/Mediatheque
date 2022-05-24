@@ -45,6 +45,6 @@ else{
     </div>
   </body>
 </html>
-<?
+<?php
 }
 ?>

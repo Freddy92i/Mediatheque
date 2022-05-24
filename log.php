@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include "style.php" ?>
-
-<body>
-<?php include "navbar.php" ?>
-<head class="body-log">
+<head >
     <link rel="stylesheet" href="css/log.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-
+<body class="body-log" style="background-color:rgb(49, 49, 49) ; margin: auto">
+<?php include "navbar.php" ?>
 <?php
 session_start();
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -38,7 +36,8 @@ if(isset($_SESSION['message'])) {
     echo '<br>';
 }
 ?>
-<body class="body-log">
+
+
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Se Connecter</label>

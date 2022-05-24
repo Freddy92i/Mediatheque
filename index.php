@@ -41,7 +41,7 @@ if(isset($_SESSION['message'])) {
                     <p class="lead">Bienvenue sur le site de la médiathèque. Le catalogue en ligne de la médiathèque vous permet d'effectuer des recherches pour connaître les derniers livres, CD ou DVD disponibles, mais aussi de consulter votre compte personnel, de suivre l'état de vos réservations, ou de vérifier la liste de vos documents empruntés.</p>
                 </div>
                 <div class="coldroite" style="width:50%; float:right;">
-                    <img width="400px" height="200px" src="img\bibliothequeext.png">
+                    <img class="imgmediatheque" width="400px" height="200px" src="img\bibliothequeext.png">
                 </div>
             </div>
 
@@ -59,7 +59,7 @@ if(isset($_SESSION['message'])) {
                     <p>Samedi&nbsp;&nbsp; 9h-18h</p>
                 </div>
                 <div class="colgauche">
-                    <img width="200px" height="200px" src="img\horaires.jpg">
+                    <img  src="img\horaires.jpg">
                 </div>
             </div>
 
@@ -70,7 +70,7 @@ if(isset($_SESSION['message'])) {
                 <div class="colgauche">
                     <p>Nom : Médiathèque <br><br>Adresse : 8 rue de l’Hôtel de Ville 14000 Caen.<br><br>Téléphone : 02.31.66.66.66<br><br>E-mail général : <a href="mailto:mediatheque@localhost" style="color:black">mediatheque@localhost</a></p>                </div>
                 <div class="coldroite">
-                    <img width="400px" height="200px" src="img\mediatheque.jpg">
+                    <img class="imgint" src="img\mediatheque.jpg">
                 </div>
             </div>
 

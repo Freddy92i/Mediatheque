@@ -62,16 +62,22 @@ $affichealt = $result[7]
         
 
         
+        <div class="homelink-signup">
+          <img id="arrow" src="img\arrowg.png">
+					<a id="backhome"href="Mediatheque.php" > Retour </a>
+				</div>
         
-        
-      </div> <!-- end column2 -->
-    </div> <!-- end description -->
-      <div class="adminmove">
+        <div class="adminmove">
           <?php if($user && $user['role'] == 'admin') { ?>
             <a href="editmovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier</a>
             <a href="traitement/deletemovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Supprimer</a>
       </div>
+        
+      </div> <!-- end column2 -->
+    </div> <!-- end description -->
+
     </div>
+    
     
    
   </div> <!-- end container -->

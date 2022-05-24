@@ -25,13 +25,13 @@
         echo '<br>';
     }
     ?>
-   <?php 
+   <?php /* 
             if(empty($_COOKIE['id'])) { // Redirection si la personne n'est pas connecté
                 $_SESSION['message']='Veuillez vous inscrire ou vous connecter pour accéder à cette rubrique';
                 header('location: log.php');
             } else { // Si la personne est connectée on lui affiche la page 
 
-    ?>
+    */ ?> 
     <div class="container"></br>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
@@ -185,7 +185,7 @@ foreach ($result as $film) { ?>
                     <?php } ?>
                 </div>
             </div>
-<?php } } }?>
+<?php } } // } ?>
 
         </div>
     </div>
