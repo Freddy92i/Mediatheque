@@ -36,6 +36,22 @@ img#log-img{
 .form-group.card-img-top{
     max-height: 300px;
 }
+/* admin part */
+.adminpart{
+  position: relative;
+  text-align: end;
+  right: 40px;
+}
+
+.adminspace{
+  color: #444444;
+}
+.img-admin{
+  height: 20px;
+}
+
+
+
 /* lougout img */
 
 #logout-image{

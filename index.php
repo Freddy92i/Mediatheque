@@ -13,7 +13,14 @@
 
 <div class="accesmediatheque">
     <a id="medialink" class="medialink" href="mediatheque.php">Accéder à la Mediathèque <span class="sr-only"></span></a>
-</div>
+</div>    
+    <?php  if($user && $user['role'] == 'admin') { ?>
+                        <div class="adminpart">
+                            <a href="admin/home.php" class="adminspace">Espace Admin</a>
+                            <img src="img/admin.png" class="img-admin">
+                        </div>
+    <?php } ?>
+
 <?php
 session_start();
 
@@ -38,7 +45,12 @@ if(isset($_SESSION['message'])) {
             <div class="blocpresentation" style="height: 400px">
                 <h2 class="heading" style="text-align: center;padding-top: 20px;">PRESENTATION</h2>
                 <div class="colgauche" >
-                    <p class="lead">Bienvenue sur le site de la médiathèque. Le catalogue en ligne de la médiathèque vous permet d'effectuer des recherches pour connaître les derniers livres, CD ou DVD disponibles, mais aussi de consulter votre compte personnel, de suivre l'état de vos réservations, ou de vérifier la liste de vos documents empruntés.</p>
+                    <p class="lead">
+                        Bienvenue sur le site de la médiathèque. Le catalogue en ligne de la médiathèque
+                        vous permet d'effectuer des recherches pour connaître les derniers livres, CD ou DVD disponibles,
+                        mais aussi de consulter votre compte personnel, de suivre l'état de vos réservations, ou de
+                        vérifier la liste de vos documents empruntés.
+                    </p>
                 </div>
                 <div class="coldroite" style="width:50%; float:right;">
                     <img class="imgmediatheque" width="400px" height="200px" src="img\bibliothequeext.png">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 <?php
@@ -28,7 +28,7 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUES
     if($res){
        echo "<div class='sucess'>
              <h3>L'utilisateur a été créée avec succés.</h3>
-             <p>Cliquez <a href='home.php'>ici</a> pour retourner à la page d'accueil</p>
+             <p>Cliquez <a href='../index.php'>ici</a> pour retourner à la page d'accueil</p>
        </div>";
     }
 }else{
