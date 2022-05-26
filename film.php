@@ -62,7 +62,7 @@ $affichealt = $result[7]
         
 
         
-        <div class="btn-retour" style="text-align: center;">
+        <div class="btn-retour">
           <img id="arrow" src="img\arrowg.png">
 	  <a id="backhome"href="mediatheque.php" > Retour </a>
 	</div>
