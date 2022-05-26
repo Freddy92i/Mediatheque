@@ -42,7 +42,6 @@ $affichealt = $result[7]
       
         <div class="title1" style=" font-size: 30px; color: black;"><?php echo $nom ?></div>   
 
-        <div class="duree" style=" font-size: 30px; color: black;"><?php  echo $duree ?></div>   -->
         
         
       </div> <!-- end details -->
@@ -53,6 +52,9 @@ $affichealt = $result[7]
       
       <div class="column1">
         <span class="tag"><?php echo $categorie ?></span>
+        <div class="duree"><?php  echo $duree ?> minutes </div> 
+        <div class="realisateur">par : <?php  echo $realisateur ?></div> 
+
 
       </div> <!-- end column1 -->
       
