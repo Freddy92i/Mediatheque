@@ -31,7 +31,7 @@ if(!empty($_GET['filmid']))
 {
     $id = $_GET['filmid'];
     $_SESSION['filmid'] = $id;
-    $statement = $bdd->prepare("SELECT film.id, film.nom, film.duree, film.resume, film.realisateur, film.img, categorie.categorie AS categorie FROM film INNER JOIN categorie ON film.RefCat = categorie.RefCat WHERE film.id = '$id'");
+    $statement = $bdd->prepare("SELECT film.id, film.nom, film.duree, film.resume, film.realisateur, film.img, film.imgalt, categorie.categorie AS categorie FROM film INNER JOIN categorie ON film.RefCat = categorie.RefCat WHERE film.id = '$id'");
     $statement->execute();
     $result = $statement->fetch(2); ?>
 <?php
@@ -100,6 +100,14 @@ if(!empty($_GET['filmid']))
                 <div class="form-group">
                     <label>Image</label>
                     <input type="text" name="image" class="form-control" value="<?php echo $result['img'];?>">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12">
+                <div class="form-group">
+                    <label>Image alternatvie</label>
+                    <input type="text" name="imgalt" class="form-control" value="<?php echo $result['imgalt'];?>">
                 </div>
             </div>
         </div>

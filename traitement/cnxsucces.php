@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../css/style.css" rel="stylesheet">
     <script src="main.js"></script>
-<meta http-equiv="refresh" content="4;url=../index.php">
+<meta http-equiv="refresh" content="3;url=../index.php">
   </head>
   <body>
   <div class="cnxreussie">
@@ -21,3 +21,4 @@
     </div>
   </body>
 </html>
+<?php include "footer.php" ?>

@@ -59,3 +59,4 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUES
 <?php } ?>
 </body>
 </html>
+<?php include "footer.php" ?>

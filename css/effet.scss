@@ -53,6 +53,9 @@ a:hover {
     transform-origin:0 0;
     
 }
+.footer{
+  text-align: center;
+}
 
 .cover {
   position: absolute;
@@ -87,11 +90,10 @@ a:hover {
       border-radius: 5px;
       color: #544C21;
       font-size: 14px;
-      padding: 0px 4px;
-      
+      padding: 0px 4px;  
     }
-  }
 }
+
 
 .description {
   
@@ -127,10 +129,19 @@ a:hover {
 
 .column2 {
   padding-left: 41px;
-  padding-top: 30px;
   margin-left: 20px;
   width: 480px;
   float: left;
+}
+
+.btn-retour{
+  position: relative;
+  left: 62px;
+  text-decoration: none;
+  color: black;
+}
+#backhome{
+  color: #000;
 }
 
 

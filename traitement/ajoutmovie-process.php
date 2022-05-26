@@ -13,17 +13,18 @@ if(empty($_COOKIE['id'])) {
     $realisateur = $_POST['realisateur'];
     $categorie = $_POST['categorie'];
     $image = $_POST['image'];
+    $imgalt = $_POST['imgalt'];
 
-    if (empty($nom) || empty($duree) || empty($resume) || empty($realisateur) || empty($categorie) || empty($image)) { // Gestion d'erreur si un des champs est vide
+    if (empty($nom) || empty($duree) || empty($resume) || empty($realisateur) || empty($categorie) || empty($image) || empty($imgalt)) { // Gestion d'erreur si un des champs est vide
         // Création de la session message pour y afficher le message de confirmation
         $_SESSION['message'] = 'Un des champs est vide';
         header('location: ../ajoutmovie.php');
-    } elseif(strlen($nom) > 40 || strlen($duree) > 3 || strlen($resume) > 500 || strlen($realisateur) > 40 || strlen($image) > 500) {
+    } elseif(strlen($nom) > 40 || strlen($duree) > 3 || strlen($resume) > 500 || strlen($realisateur) > 40 || strlen($image) > 500 || strlen($imgalt) > 500) {
         $_SESSION['message'] = 'Problème d\'insertion dans la base de donnée';
         header('location: ../ajoutmovie.php');
     }
     else { // Si tous les champs sont remplis, on execute la requete SQL
-        $req = $bdd->prepare('INSERT INTO film VALUES(:id,:nom,:duree,:resume,:realisateur,:categorie,:image)');
+        $req = $bdd->prepare('INSERT INTO film VALUES(:id,:nom,:duree,:resume,:realisateur,:categorie,:image,:imgalt)');
         $req->execute(array(
                 'id' => NULL,
                 'nom' => $nom,
@@ -31,7 +32,8 @@ if(empty($_COOKIE['id'])) {
                 'resume' => $resume,
                 'realisateur' => $realisateur,
                 'categorie' => $categorie,
-                'image' => $image,)
+                'image' => $image,
+                'imgalt' => $imgalt)
         );
         // Création de la session message pour y afficher le message de confirmation
         $_SESSION['message'] = 'Ajout du film effectué avec succès';

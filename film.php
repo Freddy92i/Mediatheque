@@ -62,16 +62,11 @@ $affichealt = $result[7]
         
 
         
-        <div class="homelink-signup">
+        <div class="btn-retour">
           <img id="arrow" src="img\arrowg.png">
 					<a id="backhome"href="mediatheque.php" > Retour </a>
 				</div>
         
-        <div class="adminmove">
-          <?php if($user && $user['role'] == 'admin') { ?>
-            <a href="editmovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Modifier</a>
-            <a href="traitement/deletemovie.php?filmid=<?php echo $film['id']; ?>" class="card-link">Supprimer</a>
-      </div>
         
       </div> <!-- end column2 -->
     </div> <!-- end description -->
@@ -85,4 +80,4 @@ $affichealt = $result[7]
 
 </body>
 </html>
-<?php } ?>
+<?php include "footer.php" ?>

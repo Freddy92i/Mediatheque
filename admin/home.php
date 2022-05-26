@@ -48,3 +48,4 @@ else{
 <?php
 }
 ?>
+<?php include "footer.php" ?>
