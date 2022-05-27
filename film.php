@@ -53,7 +53,7 @@ $affichealt = $result[7]
       <div class="column1">
         <span class="tag"><?php echo $categorie ?></span>
         <div class="duree"><?php  echo $duree ?> minutes </div> 
-        <div class="realisateur">par : <?php  echo $realisateur ?></div> 
+        <div class="realisateur">par  <?php  echo $realisateur ?></div> 
 
 
       </div> <!-- end column1 -->
