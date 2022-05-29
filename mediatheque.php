@@ -185,7 +185,7 @@ foreach ($result as $film) { ?>
                     <?php } ?>
                 </div>
             </div>
-<?php } }  //} ?>
+<?php } }  } ?>
 
         </div>
     </div>
