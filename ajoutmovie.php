@@ -8,7 +8,7 @@
 <?php
 if(empty($_COOKIE['id'])) {
     $_SESSION['message']='Veuillez vous inscrire ou vous connecter pour accéder à cette rubrique';
-    header('location: inscription.php');
+    header('location: log.php');
 } else {
 session_start();
 if(isset($_SESSION['message'])) { // Si il y a un quelconque message dans le $_SESSION, on l'affiche
@@ -26,7 +26,7 @@ if(isset($_SESSION['message'])) { // Si il y a un quelconque message dans le $_S
 
 
 
-<form  method="post" action="Traitement/ajoutMovie-process.php" style="text-align: center">
+<form  method="post" action="traitement/ajoutmovie-process.php" style="text-align: center">
     <div class="col-md-4">
         <div class="row">
             <div class="col-md-6">
@@ -62,7 +62,7 @@ if(isset($_SESSION['message'])) { // Si il y a un quelconque message dans le $_S
                     <label for="category">Catégorie:</label>
                     <select class="form-control" name="categorie" id="category" name="category">
                         <?php
-                        include "APP/connexionPDO.php";
+                        include "app/connexionpdo.php";
 
                         $query = $bdd->query('SELECT * FROM categorie');
                         $result2 = $query -> fetchAll();
