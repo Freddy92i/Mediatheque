@@ -46,8 +46,8 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUES
   <div>
       <select class="box-input" name="role" id="role" >
         <option value="" disabled selected>role</option>
-        <option value="admin">Admin</option>
-        <option value="user">User</option>
+        <option value="admin">admin</option>
+        <option value="user">guest</option>
       </select>
   </div>
   
