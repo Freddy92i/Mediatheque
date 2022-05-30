@@ -84,7 +84,7 @@ if(isset($_SESSION['message'])) { // Si il y a un quelconque message dans le $_S
                     <input type="text" name="image" class="form-control" placeholder="Entrer l'url de votre image">
                 </div>
                 <div class="form-group">
-                    <label>Image_alt</label>
+                    <label>Image_alternative</label>
                     <input type="text" name="img_alt" class="form-control" placeholder="Entrer l'url de votre image alternative">
                 </div>
             </div>
