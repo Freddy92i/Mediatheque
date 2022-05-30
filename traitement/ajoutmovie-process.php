@@ -15,29 +15,19 @@ if(empty($_COOKIE['id'])) {
     $image = $_POST['image'];
     $imagealt = $_POST['imagealt'];
 
-    if (empty($nom) || empty($duree) || empty($resume) || empty($realisateur) || empty($categorie) || empty($image )|| empty($imagealt)) { // Gestion d'erreur si un des champs est vide
+
+    if (empty($_POST['nom']) OR empty($_POST['duree']) OR empty($_POST['resume']) OR empty($_POST['realisateur']) OR empty($_POST['categorie']) OR empty($_POST['image']) OR empty($_POST['imagealt'])) {  // Gestion d'erreur
+        // Création de la session message pour y afficher le message d'erreur
+        $_SESSION['message'] = 'Erreur de champs';
+        header('location: ../mediatheque.php');
+    } else { // S'il n'y a pas d'erreur, on execute la requête SQL pour insérer les données dans la table information
+        $req = $bdd->prepare('INSERT INTO `film` (`id`,`nom`,`duree`,`resume`,`realisateur`,`categorie`,`image`,`imagealt`) VALUES(:id,:nom,:duree,:resume,:realisateur,:categorie,:image,:imagealt)');
+        $req->execute(array('id' => NULL, 'mail' => $nom, 'duree' => $duree, 'resume' => $resume, 'realisateur' => $realisateur, 'categorie' => $categorie, 'image' => $image, 'imagealt' => $imagealt,));
         // Création de la session message pour y afficher le message de confirmation
-        $_SESSION['message'] = 'Un des champs est vide';
-        header('location: ../ajoutmovie.php');
-    } elseif(strlen($nom) > 40 || strlen($duree) > 3 || strlen($resume) > 500 || strlen($realisateur) > 40 || strlen($image) > 500 || strlen($imagealt) > 500) {
-        $_SESSION['message'] = 'Problème d\'insertion dans la base de donnée';
-        header('location: ../ajoutmovie.php');
-    }
-    else { // Si tous les champs sont remplis, on execute la requete SQL
-        $req = $bdd->prepare('INSERT INTO film VALUES(:id,:nom,:duree,:resume,:realisateur,:categorie,:image,:imagealt)');
-        $req->execute(array(
-                'id' => NULL,
-                'nom' => $nom,
-                'duree' => $duree,
-                'resume' => $resume,
-                'realisateur' => $realisateur,
-                'categorie' => $categorie,
-                'image' => $image,
-                'imagealt' => $imagealt,)
-        );
-        // Création de la session message pour y afficher le message de confirmation
-        $_SESSION['message'] = 'Ajout du film effectué avec succès';
-        header('location: ../mediateque.php');
+        $_SESSION['message'] = 'Inscription effectue avec succes';
+        header('location:../log.php');
+
+
     }
 }
 ?>
