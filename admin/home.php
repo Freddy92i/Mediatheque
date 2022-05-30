@@ -1,4 +1,5 @@
 <?php
+require('../app/connexionpdo.php');
    if($user && $user['role'] == 'admin') { ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,7 @@ else{
   </head>
   <body>
   <div class="cnxreussie">
-        Vous n'etes pas admin, nous allons vous rediriger.
+        Vous n'êtes pas admin, nous allons vous rediriger.
         </div>
     <div class="loader">
       <span></span>
