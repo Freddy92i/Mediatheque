@@ -4,7 +4,7 @@ if(empty($_COOKIE['id'])) {
     header('location: ../log.php');
 } else {
 
-    include "../app/Connexionpdo.php";
+    include "../app/connexionpdo.php";
     session_start();
 
     $nom = $_POST['nom'];
@@ -14,19 +14,28 @@ if(empty($_COOKIE['id'])) {
     $categorie = $_POST['categorie'];
     $image = $_POST['image'];
 
-
-    if (empty($_POST['nom']) OR empty($_POST['duree']) OR empty($_POST['resume']) OR empty($_POST['realisateur']) OR empty($_POST['categorie']) OR empty($_POST['image'])) {  // Gestion d'erreur
-        // Création de la session message pour y afficher le message d'erreur
-        $_SESSION['message'] = 'Erreur de champs';
-        header('location: ../mediatheque.php');
-    } else { // S'il n'y a pas d'erreur, on execute la requête SQL pour insérer les données dans la table information
-        $req = $bdd->prepare('INSERT INTO `film` (`id`,`nom`,`duree`,`resume`,`realisateur`,`categorie`,`image`) VALUES(:id,:nom,:duree,:_resume,:realisateur,:categorie,:_image,)');
-        $req->execute(array('id' => NULL, 'mail' => $nom, 'duree' => $duree, 'resume' => $resume, 'realisateur' => $realisateur, 'categorie' => $categorie, 'image' => $image,));
+    if (empty($nom) || empty($duree) || empty($resume) || empty($realisateur) || empty($categorie) || empty($image)) { // Gestion d'erreur si un des champs est vide
         // Création de la session message pour y afficher le message de confirmation
-        $_SESSION['message'] = 'Inscription effectue avec succes';
-        header('location:../log.php');
-
-
+        $_SESSION['message'] = 'Un des champs est vide';
+        header('location: ../ajoutmovie.php');
+    } elseif(strlen($nom) > 40 || strlen($duree) > 3 || strlen($resume) > 500 || strlen($realisateur) > 40 || strlen($image) > 500) {
+        $_SESSION['message'] = 'Problème d\'insertion dans la base de donnée';
+        header('location: ../ajoutmovie.php');
+    }
+    else { // Si tous les champs sont remplis, on execute la requete SQL
+        $req = $bdd->prepare('INSERT INTO film VALUES(:id,:nom,:duree,:resume,:realisateur,:categorie,:image)');
+        $req->execute(array(
+                'id' => NULL,
+                'nom' => $nom,
+                'duree' => $duree,
+                'resume' => $resume,
+                'realisateur' => $realisateur,
+                'categorie' => $categorie,
+                'image' => $image,)
+        );
+        // Création de la session message pour y afficher le message de confirmation
+        $_SESSION['message'] = 'Ajout du film effectué avec succès';
+        header('location: ../mediatheque.php');
     }
 }
 ?>
