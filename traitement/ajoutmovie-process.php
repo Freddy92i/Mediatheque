@@ -21,7 +21,7 @@ if(empty($_COOKIE['id'])) {
         $_SESSION['message'] = 'Erreur de champs';
         header('location: ../mediatheque.php');
     } else { // S'il n'y a pas d'erreur, on execute la requête SQL pour insérer les données dans la table information
-        $req = $bdd->prepare('INSERT INTO `film` (`id`,`nom`,`duree`,`resume`,`realisateur`,`categorie`,`image`,`imagealt`) VALUES(:id,:nom,:duree,:resume,:realisateur,:categorie,:image,:imagealt)');
+        $req = $bdd->prepare('INSERT INTO `film` (`id`,`nom`,`duree`,`resume`,`realisateur`,`categorie`,`image`,`imagealt`) VALUES(:id,:nom,:duree,:_resume,:realisateur,:categorie,:_image,:imagealt)');
         $req->execute(array('id' => NULL, 'mail' => $nom, 'duree' => $duree, 'resume' => $resume, 'realisateur' => $realisateur, 'categorie' => $categorie, 'image' => $image, 'imagealt' => $imagealt,));
         // Création de la session message pour y afficher le message de confirmation
         $_SESSION['message'] = 'Inscription effectue avec succes';
