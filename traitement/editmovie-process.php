@@ -12,14 +12,15 @@ if(empty($_COOKIE['id'])) {
     $realisateur = $_POST['realisateur'];
     $categorie = $_POST['categorie'];
     $image = $_POST['image'];
+    $imagealt = $_POST['imagealt'];
 
-    if (empty($nom) || empty($duree) || empty($resume) || empty($realisateur) || empty($categorie) || empty($image)) {
+    if (empty($nom) || empty($duree) || empty($resume) || empty($realisateur) || empty($categorie) || empty($image) || empty($imagealt)) {
         // Création de la session message pour y afficher le message d'erreur
         $_SESSION['message'] = 'Un des champs est vide';
         header('location: ../editmovie.php');
     } else {
-        $req = $bdd->prepare("UPDATE film SET nom = ?, duree = ?, resume = ?, realisateur = ?, RefCat = ?, img = ? WHERE id = '$id'");
-        $req->execute(array($nom, $duree, $resume, $realisateur, $categorie, $image));
+        $req = $bdd->prepare("UPDATE film SET nom = ?, duree = ?, resume = ?, realisateur = ?, RefCat = ?, img = ?, imagealt = ? WHERE id = '$id'");
+        $req->execute(array($nom, $duree, $resume, $realisateur, $categorie, $image, $imagealt));
 
         // Création de la session message pour y afficher le message de confirmation
         $_SESSION['message'] = 'Modification du film effectuée avec succès';
