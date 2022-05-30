@@ -21,9 +21,10 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUES
   $role = stripslashes($_REQUEST['role']);
   $role = mysqli_real_escape_string($conn, $role);
   
-    $query = "INSERT into `users` (username, email, role, password)
-          VALUES ('$username', '$email', '$role', '".hash('sha256', $password)."')";
-    $res = mysqli_query($conn, $query);
+   $req = $bdd->prepare('INSERT INTO `information` (`id`,`mail`,`role`,`mdp`,`prenom`,`nom`) VALUES(:id,:mail,:_role,:mdp,:prenom,:nom)');
+        $req->execute(array('id' => NULL, 'mail' => $mail, '_role' => $role, 'mdp' => $mdp, 'prenom' => $prenom, 'nom' => $nom));
+        // Création de la session message pour y afficher le message de confirmation
+        $_SESSION['message'] = 'Inscription effectue avec succes';
 
     if($res){
        echo "<div class='sucess'>
