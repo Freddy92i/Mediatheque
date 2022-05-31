@@ -189,7 +189,9 @@
 .login-form .group .check:checked + label{
 	color:#fff;
 }
-
+.btn btn-primary{
+	margin-top: 15px;
+}
 
 
 
