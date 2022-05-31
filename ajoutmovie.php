@@ -27,68 +27,46 @@ if(isset($_SESSION['message'])) { // Si il y a un quelconque message dans le $_S
 
 
 <form  method="post" action="traitement/ajoutmovie-process.php" style="text-align: center">
-    <div class="col-md-4">
-        <div class="row">
-            <div class="col-md-6">
-        <div class="form-group">
+    <div class="sign-in-htm">
+        <div class="group">
             <label>Nom du film</label>
             <input type="text" name="nom" class="form-control" placeholder="Entrer le nom du film">
         </div>
-            </div>
-            <div class="col-md-6">
-        <div class="form-group">
+        <div class="group">
             <label>Durée</label>
             <input type="number" name="duree" class="form-control" placeholder="Entrer la durée du film">
         </div>
-            </div>
+        <div class="group">
+            <label>Résumé</label>
+            <input type="text" name="resume" class="form-control" placeholder="Entrer le résumé du film">
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label>Résumé</label>
-                    <input type="text" name="resume" class="form-control" placeholder="Entrer le résumé du film">
-                </div>
-            </div>
+        <div class="group">
+            <label>Réalisateur</label>
+            <input type="text" name="realisateur" class="form-control" placeholder="Entrer le nom du réalisateur du film">
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label>Réalisateur</label>
-                    <input type="text" name="realisateur" class="form-control" placeholder="Entrer le nom du réalisateur du film">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="category">Catégorie:</label>
-                    <select class="form-control" name="categorie" id="category" name="category">
-                        <?php
+        <div class="group">
+            <label for="category">Catégorie:</label>
+                <select class="form-control" name="categorie" id="category" name="category">
+                    <?php
                         include "app/connexionpdo.php";
-
                         $query = $bdd->query('SELECT * FROM categorie');
                         $result2 = $query -> fetchAll();
-
                         foreach ($result2 as $row)
                         {
                             echo '<option value="'. $row['RefCat'] .'">'. $row['categorie'] . '</option>';
                         }
-                        ?>
-                    </select>
-                </div>
-            </div>
-
+                    ?>
+                </select>
         </div>
-        <div class="row">
-        <div class="col-md-12">
-                <div class="form-group">
-                    <label>Image</label>
-                    <input type="text" name="img" class="form-control" placeholder="Entrer l'url de votre image">
-                </div>
-                <div class="form-group">
-                    <label>Image Alternative</label>
-                    <input type="text" name="img_alt" class="form-control" placeholder="Entrer l'url de votre image alternative">
-                </div>
+        <div class="group">
+            <label>Image</label>
+            <input type="text" name="img" class="form-control" placeholder="Entrer l'url de votre image">
         </div>
-
+        <div class="group">
+            <label>Image Alternative</label>
+            <input type="text" name="img_alt" class="form-control" placeholder="Entrer l'url de votre image alternative">
+        </div>
+    </div>
     <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
 
