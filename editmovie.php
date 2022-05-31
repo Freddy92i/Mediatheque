@@ -101,13 +101,9 @@ if(!empty($_GET['filmid']))
                     <label>Image</label>
                     <input type="text" name="image" class="form-control" value="<?php echo $result['img'];?>">
                 </div>
-            </div>
-        </div>
-        <div class="row">
-        <div class="col-md-12">
                 <div class="form-group">
-                    <label>Image alternatvie</label>
-                    <input type="text" name="imagealt" class="form-control" value="<?php echo $result['imagealt'];?>">
+                    <label>Image Alternative</label>
+                    <input type="text" name="image_alt" class="form-control" value="<?php echo $result['img_alt'];?>">
                 </div>
             </div>
         </div>
