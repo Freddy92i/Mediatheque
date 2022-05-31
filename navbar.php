@@ -13,7 +13,7 @@
                 $req = $bdd->prepare('SELECT * FROM information WHERE id= :id');
                 $req-> execute(array('id'=>$id));
                 $user = $req->fetch();
-                echo '<div id="navbar-hello"><span>Bonjour '.$user['prenom'].' !&nbsp;&nbsp;</span>';
+                echo '<div class="navbar-hello"><span>Bonjour '.$user['prenom'].' !&nbsp;&nbsp;</span>';
                 echo '<a class="logout-img" href="traitement/traitementdeconnexion.php"> <img id="logout-image" title="se déconnecter" src="img\logout.png"> </a></div>';
              } ?>
             <div id="logo-droite">

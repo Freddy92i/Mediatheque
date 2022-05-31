@@ -51,28 +51,26 @@ img#log-img{
 }
 
 
-
-/* lougout img */
-
-#logout-image{
-    height: 20px;
-    margin-top: 14px;   
-   }
-
-#navbar-hello {
+.navbar-hello {
     display: flex;
     color: #cdcdcd;
+    align-items: center;
+    position: relative;
+    right: 35px;
 }
 
 #navbar-hello > span {
-    padding: 17px 6px;
-    line-height: 1;
+display: flex;
+line-height: 1;
+align-items: center;
 }
 #logo-droite{
     position: relative;
     margin-top: -3px;
 }
-
+#logout-image{
+  height: 20px;
+}
 
 
 
