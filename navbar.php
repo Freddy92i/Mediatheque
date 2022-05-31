@@ -5,13 +5,7 @@
     <nav style="background-color:#848484" >
         <div id="navbar" class="collapse navbar-collapse" id="navbarSupportedContent">
            <a href="index.php"><img width="150px" height="50px" src="img\logo.png"></a>
-            <div id="logo-droite">
-                <ul class="navbar-ul">
-                    <a id="log-btn" href="log.php" ><img id="log-img" title="Se Connecter ou s'inscrire" src="img\id.png">
-                    </a>
-                 </ul>
-            </div>
-            <?php if(empty($_COOKIE['id'])) { 
+           <?php if(empty($_COOKIE['id'])) { 
                  $user = null;
                  } elseif(isset($_COOKIE['id'])) {
                 include("app/connexionpdo.php");
@@ -22,6 +16,13 @@
                 echo '<div id="navbar-hello"><span>Bonjour '.$user['prenom'].' !&nbsp;&nbsp;</span>';
                 echo '<a class="logout-img" href="traitement/traitementdeconnexion.php"> <img id="logout-image" title="se déconnecter" src="img\logout.png"> </a></div>';
              } ?>
+            <div id="logo-droite">
+                <ul class="navbar-ul">
+                    <a id="log-btn" href="log.php" ><img id="log-img" title="Se Connecter ou s'inscrire" src="img\id.png">
+                    </a>
+                 </ul>
+            </div>
+           
          </div>
     </nav>
 <body> 
