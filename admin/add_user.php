@@ -35,7 +35,7 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUES
     }
 }else{
 ?>
-<form class="box" action="traitement/traitementinscription.php" method="post">
+<form class="box" action="../traitement/traitementinscription.php" method="post">
   <h1 class="box-logo box-title">
   </h1>
     <h1 class="box-title">Ajouter des utilisateurs</h1>
