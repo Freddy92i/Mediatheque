@@ -64,8 +64,8 @@ $affichealt = $result[7]
         
 
         
-        <div class="btn-retour">
-	  <a id="backhome"href="mediatheque.php" > Retour </a>
+        <div class="retourmediatheque">
+	  <a id="retourmediatheque" href="mediatheque.php" > Retour </a>
 	</div>
         
         

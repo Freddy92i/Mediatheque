@@ -27,24 +27,24 @@ if(isset($_SESSION['message'])) { // Si il y a un quelconque message dans le $_S
 
 
 <form  method="post" action="traitement/ajoutmovie-process.php" style="text-align: center">
-    <div class="sign-in-htm">
-        <div class="group">
+    <div class="form-addfilm">
+        <div class="form-group">
             <label>Nom du film</label>
             <input type="text" name="nom" class="form-control" placeholder="Entrer le nom du film">
         </div>
-        <div class="group">
+        <div class="form-group">
             <label>Durée</label>
             <input type="number" name="duree" class="form-control" placeholder="Entrer la durée du film">
         </div>
-        <div class="group">
+        <div class="form-group">
             <label>Résumé</label>
             <input type="text" name="resume" class="form-control" placeholder="Entrer le résumé du film">
         </div>
-        <div class="group">
+        <div class="form-group">
             <label>Réalisateur</label>
             <input type="text" name="realisateur" class="form-control" placeholder="Entrer le nom du réalisateur du film">
         </div>
-        <div class="group">
+        <div class="form-group">
             <label for="category">Catégorie:</label>
                 <select class="form-control" name="categorie" id="category" name="category">
                     <?php
@@ -66,6 +66,7 @@ if(isset($_SESSION['message'])) { // Si il y a un quelconque message dans le $_S
             <label>Image Alternative</label>
             <input type="text" name="img_alt" class="form-control" placeholder="Entrer l'url de votre image alternative">
         </div>
+
     </div>
     <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
