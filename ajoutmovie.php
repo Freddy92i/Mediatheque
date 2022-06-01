@@ -4,7 +4,7 @@
 
 <?php include "navbar.php" ?>
 
-
+<body style="margin:auto">
 <?php
 if(empty($_COOKIE['id'])) {
     $_SESSION['message']='Veuillez vous inscrire ou vous connecter pour accéder à cette rubrique';
@@ -70,7 +70,7 @@ if(isset($_SESSION['message'])) { // Si il y a un quelconque message dans le $_S
     </div>
     <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
-
+</body>
 </html>
 
 <?php } ?>

@@ -6,6 +6,7 @@ require('../app/connexionpdo.php');
 <html>
   <head>
   <link rel="stylesheet" href="../style.css" />
+  <?php include "navbar.php" ?>
   </head>
   <body>
     <div class="sucess">
@@ -22,6 +23,7 @@ require('../app/connexionpdo.php');
 
 <? } 
 else{
+  include "navbar.php"
   ?>
   <html>
   <head>
