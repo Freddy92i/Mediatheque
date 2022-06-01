@@ -1,5 +1,4 @@
 <?
-    session_start();
 
     include "../app/connexionpdo.php";
     $mail = $_POST['mail'];
