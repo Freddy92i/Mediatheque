@@ -26,7 +26,6 @@ if(isset($_COOKIE['id'])) {
         $_SESSION['message'] = 'Les 2 mdp ne sont pas identiques';
         header('location: ../log.php');
     } else { // S'il n'y a pas d'erreur, on execute la requête SQL pour insérer les données dans la table information
-        $role = 'guest';
         $mdp = password_hash($mdp, $algo);
         $req = $bdd->prepare('INSERT INTO `information` (`id`,`mail`,`role`,`mdp`,`prenom`,`nom`) VALUES(:id,:mail,:_role,:mdp,:prenom,:nom)');
         $req->execute(array('id' => NULL, 'mail' => $mail, '_role' => $role, 'mdp' => $mdp, 'prenom' => $prenom, 'nom' => $nom));
