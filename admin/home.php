@@ -6,13 +6,13 @@
   <body>
     <?php include "navbar.php" ?>
       <div class="sucess">
-        <h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
-        <p>C'est votre espace admin.</p>
-        <ul>
-          <a href="add_user.php">ajouter un utilisateurs</a> | 
-          <a href="#">Update user</a> | 
-          <a href="#">Delete user</a> | 
-          <a href="../traitement/traitementdeconnexion.php">Déconnexion</a>
+        <h1 class="admin-h1">Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
+        <p class="admin-text" >C'est votre espace admin.</p>
+        <ul class="admin-list" >
+          <a class="admin-fonctions" href="add_user.php">ajouter un utilisateurs</a> | 
+          <a class="admin-fonctions" href="#">Update user</a> | 
+          <a class="admin-fonctions" href="#">Delete user</a> | 
+          <a class="admin-fonctions" href="../traitement/traitementdeconnexion.php">Déconnexion</a>
         </ul>
       </div>
   </body>
