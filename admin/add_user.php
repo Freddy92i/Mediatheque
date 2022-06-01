@@ -9,7 +9,7 @@
 require('../app/connexionpdo.php');
 
 ?>
-<form class="box" action="../traitement/traitementinscription.php" method="post">
+<form class="box" action="../traitement/add_user-process.php" method="post">
   <h1 class="box-logo box-title">
   </h1>
     <h1 class="box-title">Ajouter des utilisateurs</h1>
