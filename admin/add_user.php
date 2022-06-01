@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
+<?php include "navbar.php" ?>
 <?php
 require('../app/connexionpdo.php');
 
@@ -34,12 +35,14 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUES
     }
 }else{
 ?>
-<form class="box" action="" method="post">
+<form class="box" action="traitement/traitementinscription.php" method="post">
   <h1 class="box-logo box-title">
   </h1>
     <h1 class="box-title">Ajouter des utilisateurs</h1>
-  <input type="text" class="box-input" name="username" 
-  placeholder="Nom d'utilisateur" required />
+  <input type="text" class="box-input" name="prenom" 
+  placeholder="Prénom" required />
+  <input type="text" class="box-input" name="nom" 
+  placeholder="Nom" required />
   
     <input type="text" class="box-input" name="email" 
   placeholder="Email" required />
@@ -55,9 +58,10 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['role'], $_REQUES
     <input type="password" class="box-input" name="password" 
   placeholder="Mot de passe" required />
   
-    <input type="submit" name="submit" value="+ Ajouter" class="box-button" />
+    <input type="submit" name="submit" value=" + Ajouter" class="box-button" />
 </form>
 <?php } ?>
+<?php include "footer.php" ?>
 </body>
 </html>
-<?php include "footer.php" ?>
+
