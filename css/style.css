@@ -37,6 +37,21 @@ img#log-img{
     max-height: 300px;
 }
 /* admin part */
+.admin-h1{
+  text-align: center;
+}
+.admin-text{
+  text-align: center;
+}
+.admin-list{
+  text-align: center;
+}
+.admin-fonctions{
+  text-align: center;
+} 
+
+
+
 .adminpart{
   position: relative;
   text-align: end;
