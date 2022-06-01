@@ -1,12 +1,11 @@
 <?php
+session_start();
 require('../app/connexionpdo.php');
    if($user && $user['role'] == 'admin') { ?>
 
-<!DOCTYPE html>
 <html>
   <head>
-  <link rel="stylesheet" href="../style.css" />
-
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
   <?php include "navbar.php" ?>
