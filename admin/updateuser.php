@@ -6,15 +6,9 @@
 <body>
 <?php include "navbar.php" ?>
 <?php
-include('app/connexionpdo.php');
-if(!empty($_GET['id']))
-{
-    $id = $_GET['informationid'];
-    $_SESSION['informationid'] = $id;
-    $statement = $bdd->prepare("SELECT information.id, information.nom, information.duree, information.resume, information.realisateur, information.img, information.img_alt, categorie.categorie AS categorie FROM information INNER JOIN categorie ON information.RefCat = categorie.RefCat WHERE information.id = '$id'");
-    $statement->execute();
-    $result = $statement->fetch(2); ?>
+require('../app/connexionpdo.php');
 
+?>
 <form class="box" action="../traitement/updateuser-process.php" method="post">
   <h1 class="box-logo box-title">
   </h1>
@@ -43,6 +37,4 @@ if(!empty($_GET['id']))
 <?php include "footer.php" ?>
 </body>
 </html>
-<?php
-}
-?>
+
