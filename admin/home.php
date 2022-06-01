@@ -6,9 +6,10 @@ require('../app/connexionpdo.php');
 <html>
   <head>
   <link rel="stylesheet" href="../style.css" />
-  <?php include "navbar.php" ?>
+
   </head>
   <body>
+  <?php include "navbar.php" ?>
     <div class="sucess">
     <h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
     <p>C'est votre espace admin.</p>
@@ -23,7 +24,7 @@ require('../app/connexionpdo.php');
 
 <? } 
 else{
-  include "navbar.php"
+
   ?>
   <html>
   <head>
@@ -36,6 +37,7 @@ else{
 <meta http-equiv="refresh" content="4;url=../index.php">
   </head>
   <body>
+  <?php include "navbar.php" ?>
   <div class="cnxreussie">
         Vous n'êtes pas admin, nous allons vous rediriger.
         </div>
