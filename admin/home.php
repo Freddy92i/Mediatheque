@@ -10,8 +10,8 @@
         <p class="admin-text" >C'est votre espace admin.</p>
         <ul class="admin-list" >
           <a class="admin-fonctions" href="add_user.php">ajouter un utilisateurs</a>&nbsp;&nbsp; | &nbsp;&nbsp;
-          <a class="admin-fonctions" href="#">Update user</a>&nbsp;&nbsp; | &nbsp;&nbsp;
-          <a class="admin-fonctions" href="#">Delete user</a>&nbsp;&nbsp; | &nbsp;&nbsp; &nbsp;&nbsp;
+          <a class="admin-fonctions" href="update_user.php">Modifier un utilisateur</a>&nbsp;&nbsp; | &nbsp;&nbsp;
+          <a class="admin-fonctions" href="delete_user.php">supprimer un utilisateur</a>&nbsp;&nbsp; | &nbsp;&nbsp; &nbsp;&nbsp;
           <a class="admin-fonctions" href="../traitement/traitementdeconnexion.php">Déconnexion</a>
         </ul>
       </div>
