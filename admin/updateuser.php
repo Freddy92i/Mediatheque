@@ -14,12 +14,12 @@ require('../app/connexionpdo.php');
   </h1>
     <h1 class="box-title">Modifier des utilisateurs</h1>
   <input type="text" class="box-input" name="prenom" 
-  placeholder="Prénom" value="<?php echo $result['prenom'];?>" required />
+  placeholder="Prénom" required />
   <input type="text" class="box-input" name="nom" 
-  placeholder="Nom" value="<?php echo $result['nom'];?>" required />
+  placeholder="Nom" required />
   
     <input type="text" class="box-input" name="email" 
-  placeholder="Email" value="<?php echo $result['mail'];?>" required />
+  placeholder="Email" required />
   
   <div>
       <select class="box-input" name="role" id="role" >
@@ -30,7 +30,7 @@ require('../app/connexionpdo.php');
   </div>
   
     <input type="password" class="box-input" name="password" 
-  placeholder="Mot de passe" value="<?php echo $result['mdp'];?>"required />
+  placeholder="Mot de passe" required />
   
     <input type="submit" name="submit" value=" + Ajouter" class="box-button" />
 </form>
