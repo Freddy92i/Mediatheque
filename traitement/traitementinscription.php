@@ -10,7 +10,7 @@ if(isset($_COOKIE['id'])) {
     $mdp2 = $_POST['mdp2'];
     $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
-    $role = $_POST['guest'];
+    $role = 'guest';
     $algo = PASSWORD_DEFAULT;
 
 
