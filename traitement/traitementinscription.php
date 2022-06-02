@@ -28,7 +28,7 @@ if(isset($_COOKIE['id'])) {
         header('location: ../log.php');
     } else { // S'il n'y a pas d'erreur, on execute la requête SQL pour insérer les données dans la table information
         $mdp = password_hash($mdp, $algo);
-        $req = $bdd->prepare('INSERT INTO `information` (`id`,`mail`,`_role`,`mdp`,`prenom`,`nom`) VALUES(:id,:mail,:_role,:mdp,:prenom,:nom)');
+        $req = $bdd->prepare('INSERT INTO `information` (`id`,`mail`,`role`,`mdp`,`prenom`,`nom`) VALUES(:id,:mail,:_role,:mdp,:prenom,:nom)');
         $req->execute(array('id' => NULL, 'mail' => $mail, '_role' => $role, 'mdp' => $mdp, 'prenom' => $prenom, 'nom' => $nom));
         // Création de la session message pour y afficher le message de confirmation
         $_SESSION['message'] = 'Inscription effectue avec succes';
