@@ -9,7 +9,7 @@ $result = $req->fetch();
 if(empty($_POST['mail']) OR empty($_POST['mdp'])) { // Si un des 2 champs est vide
     // Création de la session message pour y afficher le message d'erreur
     $_SESSION['message']='Erreur de champ';
-   // header('location: ../index.php');
+    header('location: ../log.php');
 } elseif ($req->rowCount() == 1) { // Si le formulaire correspond à une ligne de la base de données information
     $mdp = $_POST['mdp'];
     $hash = $result['mdp'];
@@ -20,7 +20,7 @@ if(empty($_POST['mail']) OR empty($_POST['mdp'])) { // Si un des 2 champs est vi
     } else {
         // Création de la session message pour y afficher le message d'erreur
         $_SESSION['message']='Erreur de connexion';
-      //  header('location: ../index.php');   
+        header('location: ../log.php');
     }
 } else {
     // Création de la session message pour y afficher le message d'erreur
