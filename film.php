@@ -1,8 +1,12 @@
 <html>
     <head>
-         <link rel="stylesheet" href="css/effet.scss">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/movie.css">
+      <link rel="stylesheet" href="css/footer.css">
+
     </head>
-<body>
+<body class="body-film">
+<?php include "navbar.php" ?>
 
 <?php
 include "app/connexionpdo.php";
@@ -30,11 +34,9 @@ $affichealt = $result[7]
 <div class="movie-card">
   
   <div class="blocfilm">
-    
-  <a>
-    <img  class='cover' src=" <?php echo $affiche ?>" >
-  </a>
-        
+    <a>
+      <img  class='cover' src=" <?php echo $affiche ?>" >
+    </a>    
     <div class="hero">
       <img  class='heroalt' src=" <?php echo $affichealt ?>" >
             
@@ -47,35 +49,25 @@ $affichealt = $result[7]
       </div> <!-- end details -->
       
     </div> <!-- end hero -->
-    
     <div class="description">
-      
+
       <div class="column1">
         <span class="tag"><?php echo $categorie ?></span>
         <div class="duree"><?php  echo $duree ?> minutes </div> 
         <div class="realisateur">par  <?php  echo $realisateur ?></div> 
-
-
       </div> <!-- end column1 -->
       
       <div class="column2">
-        
         <p><?php echo $resume ?></p>
-        
 
-        
-        <div class="retourmediatheque">
-	  <a id="retourmediatheque" href="mediatheque.php" > Retour </a>
+    </div> <!-- end description -->        
+
 	</div>
-        
-        
-      </div> <!-- end column2 -->
-    </div> <!-- end description -->
-
+    <div class="retourmediatheque">
+	    <a id="btn-retour" href="mediatheque.php" > Retour </a>
     </div>
-    
-    
-   
+    </div>
+
   </div> <!-- end container -->
 </div> <!-- end movie-card -->
 

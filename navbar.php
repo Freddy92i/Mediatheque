@@ -1,5 +1,5 @@
 <head>
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav style="background-color:#848484" >

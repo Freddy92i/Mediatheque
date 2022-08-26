@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<?php include "navbar.php" ?>
+<?php include "../navbar.php" ?>
 <?php
 require('../app/connexionpdo.php');
 
@@ -34,7 +34,10 @@ require('../app/connexionpdo.php');
   
     <input type="submit" name="submit" value=" + Ajouter" class="box-button" />
 </form>
-<?php include "footer.php" ?>
+<div class="retourmediatheque" style="text-align: center; text-decoration: none">
+	    <a id="btn-retour" href="./home.php"  > Retour </a>
+    </div>
+<?php include "../footer.php" ?>
 </body>
 </html>
 

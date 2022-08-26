@@ -1,8 +1,12 @@
+.body-film{
+    margin: 0;
+    background-color: #444444;
+}
 .searchbar{
     display: flex;
     float:right;
     position: relative;
-    top: -35px;
+    top: -26px;
     border-radius: 7px;
 }
 a.ajoutfilm{
@@ -24,6 +28,7 @@ a.ajoutfilm{
     justify-content: center;
     align-items: baseline;
     position: relative;
+    top: 18px;
     right: 180px;
     gap: 20px;
 }

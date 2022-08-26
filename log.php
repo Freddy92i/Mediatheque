@@ -3,8 +3,10 @@
 <head >
     <link rel="stylesheet" href="css/log.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/footer.css">
+
 </head>
-<body class="body-log" style="background-color:rgb(49, 49, 49) ; margin: auto">
+<body class="body-log" style="margin: auto">
 <?php include "navbar.php" ?>
 <?php
 session_start();
@@ -59,7 +61,7 @@ if(isset($_SESSION['message'])) {
 					<label for="check"><span class="icon"></span> Rester connecté ?</label>
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign In">
+					<input type="submit" class="button" value="Se Connecter">
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk-si">

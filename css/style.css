@@ -3,6 +3,7 @@
 }
 body{
     background-color: #eff0f0;
+    margin: 0;
 }
 
 .alert{
@@ -67,11 +68,11 @@ img#log-img{
 
 
 .navbar-hello {
-    display: flex;
-    color: #cdcdcd;
-    align-items: center;
-    position: relative;
-    right: 35px;
+  right: 35px;
+  display: flex;
+  color: #cdcdcd;
+  align-items: center;
+  position: relative;
 }
 
 #navbar-hello > span {

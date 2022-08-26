@@ -10,7 +10,8 @@
 
 a {
   text-decoration: none;
-  color: #5C7FB8
+  color: #000000;
+  font-size: 15px;
 }
 
 a:hover {
@@ -31,8 +32,8 @@ a:hover {
 
 .blocfilm {
   margin: 0 auto;
-  width: 780px;
-  height: 640px;
+  width: 800px;
+  height: 720px;
   background: #cfd1d2;
   border-radius: 5px;
   position: relative;
@@ -61,6 +62,7 @@ a:hover {
 }
 .footer{
   text-align: center;
+  background-color: #cfd1d2;
 }
 
 .cover {
@@ -87,17 +89,16 @@ a:hover {
 .details {
   
   padding: 190px 0 0 280px;
-  
-    span {
-      position: absolute;
-      top: 3px;
-      margin-left: 12px;
-      background: #C4AF3D;
-      border-radius: 5px;
-      color: #544C21;
-      font-size: 14px;
-      padding: 0px 4px;  
-    }
+}
+.details span {
+  position: absolute;
+  top: 3px;
+  margin-left: 12px;
+  background: #c4af3d;
+  border-radius: 5px;
+  color: #544c21;
+  font-size: 14px;
+  padding: 0px 4px;
 }
 
 
@@ -121,7 +122,7 @@ a:hover {
 
 .tag {
   background: white;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 3px 8px;
   font-size: 14px;
   margin-right: 4px;
@@ -149,11 +150,11 @@ a:hover {
 #backhome{
   color: #000;
 }
-#retourmediatheque{
-  color: #000;
+.retourmediatheque{
+  width: fit-content;
+  margin: auto;
   position: relative;
-  top: 50px;
-  left: 25px;
+  top: 15%;
 }
 
 
