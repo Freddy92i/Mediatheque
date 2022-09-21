@@ -120,4 +120,6 @@ if(isset($_SESSION['message'])) {
 </body>
 </html>
 <?php } ?>
+</div>
 
+<?php include "footer.php" ?>

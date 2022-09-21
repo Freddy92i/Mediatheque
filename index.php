@@ -18,8 +18,9 @@
 </div>    
     <?php  if($user && $user['role'] == 'admin') { ?>
                         <div class="adminpart">
-                            <a href="admin/home.php" class="adminspace">Espace Admin</a>
-                            <img src="img/admin.png" class="img-admin">
+                            <a href="admin/home.php" class="adminspace">
+                                <img src="img/admin.png" class="img-admin" placeholder="Espace Admin" href="../admin/home.php">
+                            </a>
                         </div>
     <?php } ?>
 

@@ -9,9 +9,6 @@
 <meta http-equiv="refresh" content="3;url=../index.php">
   </head>
   <body>
-  <div class="cnxreussie">
-        Connexion réussie, nous allons vous rediriger.
-        </div>
     <div class="loader">
       <span></span>
       <span></span>

@@ -29,7 +29,8 @@ body{
     box-shadow: 10px 10px 15px #b3b4b4,
             	-10px -10px 15px #ffffff;
 	 border-radius: 50px;
-    margin-top: 10%;
+    margin-top: 5%;
+	margin-bottom: 5%;
 }
 .login-html{
 	width:100%;

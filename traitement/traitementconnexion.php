@@ -39,8 +39,8 @@ if (isset($_SESSION["loggedin"]) && $_SESSION[ "loggedin"] === true) {
 require_once "../app/connexionpdo.php";
 
 //definir variable et initialiser avec valeur nulle
-$username = $mdp = "";
-$username_err = $mdp_err = $login_err = "";
+$mail = $mdp = "";
+$mail_err = $mdp_err = $login_err = "";
 
 // analyser les données une fois envoyée
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -51,11 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     
-    //check username vide
+    //check mail vide
     if(empty(trim($_POST["mail"]))){
-         $username_err = "entrez un nom d'utilisateur";
+         $mail_err = "entrez un nom d'utilisateur";
     } else{
-        $username = trim($_POST["mail"]);
+        $mail = trim($_POST["mail"]);
     }
 
     // Check  mdp vide
@@ -66,46 +66,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // credential valide
-    if (empty ($username_err) && empty ($mdp_err)) {
+    if (empty ($mail_err) && empty ($mdp_err)) {
 
         // Prepare statement
-        $sql = "SELECT id, username, mdp, salt FROM users WHERE username = ?" ;
+        $sql = "SELECT id, mail, mdp FROM information WHERE mail = :mail" ;
         $stmt = $bdd->prepare($sql);
 
         if ($stmt) {
-            $stmt->bindParam($stmt, "s", $setting_username);
+            if($stmt->execute([ 'mail' => $mail ])) {
 
-            //setting username
-            $setting_username = $username;
+                $stmt->fetch();
 
-            if($stmt->execute($stmt)) {
+                if($stmt->rowCount() > 0) {
 
-                $stmt->fetch($stmt);
-
-                if($stmt->count($stmt) == 1) {
-
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_mdp, $salt);
-
-                    if (mysqli_stmt_fetch($stmt)) {
-                        $setting_mdp = hash("sha256",$mdpUnashed. hash("sha256",$salt));
-
-
-                        if($setting_mdp == $hashed_mdp) {
+                   // mysqli_stmt_bind_result($stmt, $id, $mail, $hashed_mdp, $salt);
+                    $stmt->bindColumn($stmt, $id, $mail, $hashed_mdp, $salt);
+                    if ($stmt->fetch()) {
+                        if(password_verify($mdpUnashed, $hashed_mdp)) {
                             // mdp correct
                             session_start();
                             // stocke dans la variable de session
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
+                            $_SESSION["mail"] = $mail;
                             // redirect
-                            header(location:"index.php");
+                            header("Location: index.php");
                         } else {
                             $login_err = "nom d'utilisateur ou mot de passe invalide.";
-                            print_r($username);
-                            echo '<br>';
-                            print_r($setting_mdp);
-                            echo '<br>';
-                            print_r($hashed_mdp);
+                            print_r($mail);
                         }
                     } else {
                         $login_err = "Erreur de communication avec la base de données";
@@ -115,12 +103,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $login_err = "nom d'utilisateur ou mot de passe invalide";
             }
         } else {
-            echo "Oops! Something went wrong. Please try again later";
+            echo "Oops! Quelque choses s'est mal passé ! veuillez rééssayer";
         }
 
         // close stmt
         $stmt->closeCursor($stmt);
-        //$this->connection = null;
+        $this->connection = null;
     }
 }
 ?>

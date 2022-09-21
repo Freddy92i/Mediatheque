@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-<?php include "../navbar.php" ?>
-<?php
-require('../app/connexionpdo.php');
+  
+<?php require('../app/connexionpdo.php');
 
 ?>
 <form class="box" action="../traitement/adduser-process.php" method="post">
-  <h1 class="box-logo box-title">
-  </h1>
-    <h1 class="box-title">Ajouter des utilisateurs</h1>
-  <input type="text" class="box-input" name="prenom" 
-  placeholder="Prénom" required />
-  <input type="text" class="box-input" name="nom" 
-  placeholder="Nom" required />
+  <h1 class="box-logo box-title"></h1>
+  <h1 class="box-title">Ajouter des utilisateurs</h1>
+
+  <input type="text" class="box-input" name="mail" placeholder="Email" required />
+  <input type="password" class="box-input" name="mdp" placeholder="Mot de passe" required />
+  <input type="text" class="box-input" name="prenom" placeholder="prénom" required />
+  <input type="text" class="box-input" name="nom" placeholder="nom" required />
   
-    <input type="text" class="box-input" name="email" 
-  placeholder="Email" required />
-  
-  <div>
-      <select class="box-input" name="role" id="role" >
-        <option value="" disabled selected>role</option>
-        <option value="admin">admin</option>
-        <option value="user">guest</option>
-      </select>
-  </div>
-  
-    <input type="password" class="box-input" name="password" 
-  placeholder="Mot de passe" required />
-  
-    <input type="submit" name="submit" value=" + Ajouter" class="box-button" />
+  <input type="submit" class="submit-user" name="submit" value="Ajouter" class="box-button" />
+
 </form>
-<div class="retourmediatheque" style="text-align: center; text-decoration: none">
-	    <a id="btn-retour" href="./home.php"  > Retour </a>
-    </div>
-<?php include "../footer.php" ?>
+<div class="retourmediatheque"  style="text-align: center; text-decoration: none" >
+	  <a href="./home.php"> Retour </a>
+</div>
 </body>
 </html>
 
