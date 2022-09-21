@@ -5,7 +5,6 @@
     <title>Connexion réussie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="../css/style.css" rel="stylesheet">
-    <script src="main.js"></script>
 <meta http-equiv="refresh" content="3;url=../index.php">
   </head>
   <body>
