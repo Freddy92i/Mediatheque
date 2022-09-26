@@ -13,10 +13,34 @@ body{
 	background-color: red;
 }
 
-*,:after,:before{box-sizing:border-box}
-.clearfix:after,.clearfix:before{content:'';display:table}
-.clearfix:after{clear:both;display:block}
-.forgot{color: rgb(255, 0, 0);text-decoration:none;}
+*,:after,:before{
+	box-sizing:border-box
+
+}
+
+
+.clearfix:after,.clearfix:before{
+	content:'';
+	display:table
+}
+.clearfix:after{
+	clear:both;
+	display:block
+}
+.forgot{
+	color: rgb(255, 0, 0);
+	text-decoration:none; 
+	transition: all .2s ease-in-out; 
+	font-size: 16px;
+}
+.forgot:hover {
+	transform: scale(1.1);
+	font-size: 18px; 
+}
+.btn-btn-primary{
+	margin-top: 20px;
+	cursor: pointer;
+}
 
 
 .login-wrap{
@@ -62,6 +86,7 @@ body{
 	text-transform:uppercase;
 }
 .login-html .tab{
+	cursor:pointer;
 	font-size:22px;
 	margin-right:15px;
 	padding-bottom:5px;
@@ -133,7 +158,12 @@ body{
 .homelink-signin a{
 	color: black;
 	text-decoration: none;
+	transition: all .2s ease-in-out;
 }
+.homelink-signup:hover{
+transform: scale(1.1);
+}
+
 .homelink-signup {
 	display: flex;
 	color:white;
@@ -153,6 +183,7 @@ body{
 	margin-top: 10px;
 }
 .login-form .group .button{
+	cursor:pointer;
     padding-top: 20px;
 	background:#44444424;
     transition: all .2s ease-in-out; 
@@ -256,8 +287,21 @@ div.group{
 	margin-top: -20px;
 }
 .foot-lnk-su{
+	cursor: pointer;
 	text-align:center;
 	color:rgb(0, 0, 0);
 	margin-top: -35px;
+	/*transition: all .2s ease-in-out;*/
+}
+
+.dmembre{
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+
 
 }
+.dmembre:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+}
+

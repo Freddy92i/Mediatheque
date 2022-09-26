@@ -77,11 +77,13 @@ $nom = $result[4];
         
 
 
-        <button type="submit" class="btn btn-primary">Modifier</button>
+        <button type="submit" class="btn btn-primary" onclick="modifuser()">Modifier</button>
     </form>
-        <?php if($message) { ?>
-            <p><?php echo $message; ?></p>
-        <?php } ?>
+    <script>
+        function modifuser() {
+        alert("la modification du user a été prise en compte !");
+        }
+</script>
         <div class="retourmediatheque"  style="text-align: center; text-decoration: none" >
 	      <a href="../admin/home.php"> Retour </a>
         </div>

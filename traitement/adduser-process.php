@@ -21,8 +21,13 @@
         $req = $bdd->prepare('INSERT INTO `information` (`mail`,`role`,`mdp`,`prenom`,`nom`) VALUES(:mail,:_role,:mdp,:prenom,:nom)');
         $req->execute(array('mail' => $mail, '_role' => $role, 'mdp' => $mdp, 'prenom' => $prenom, 'nom' => $nom));
         // Création de la session message pour y afficher le message de confirmation
-        // echo '<script>alert("Inscription effectue avec succes")</script>';
-        $_SESSION['alert'] = 'Inscription effectue avec succes';
+        ?>
+        <script>
+            alert("Inscription effectue avec succes");
+        </script>
+        
+        <?php
+        // $_SESSION['alert'] = 'Inscription effectue avec succes';
         
         header('location:../admin/home.php');
 

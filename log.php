@@ -105,7 +105,7 @@ if(isset($_SESSION['message'])) {
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk-su">
-					<label for="tab-1">Déjà membre ?</a>
+					<label class="dmembre" for="tab-1">Déjà membre ?</a>
 				</div>
                 <div class="homelink-signup">
                     <img id="arrow" src="img\arrowg.png">

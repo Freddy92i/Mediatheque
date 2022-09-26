@@ -89,16 +89,21 @@ align-items: center;
 #logout-image{
   height: 20px;
 }
-
+.card-link{
+  text-decoration: none;
+  cursor:pointer;
+  color: #000;
+  position: relative;
+  bottom: 10px;
+}
 
 
 .affiche-film .card-img-top{
-    max-height: 300px;
+    max-height: 350px;
 }
 div.card{
     border-radius: 10px;
     background: #fafafa;
-    border-radius: 5px ;
     color: white;
     box-shadow: 20px 20px rgba(0,0,0,.15);
 }
@@ -128,6 +133,12 @@ div.card{
 #medialink:hover { 
     transform: scale(1.1); 
     }
+
+.submit-user:hover{
+  cursor: pointer;
+  transition: all .2s ease-in-out; 
+  transform: scale(1.1); 
+}
 
 #suppr{
     position: relative;

@@ -46,7 +46,7 @@ $result = $query->fetchAll(5);
 					<td> <?php echo $user['prenom']; ?></td>
 					<td> <?php echo $user['nom']; ?></td>
 					<td> <?php echo $user['mail']; ?></td>
-					<td> <a href=" ./edituser.php?id=<?php echo $user['id']; ?>" class="card-link">Modifier</a></td>
+					<td> <a href=" ../traitement/edituser.php?id=<?php echo $user['id']; ?>" class="card-link">Modifier</a></td>
 					<td> <a href=" ../traitement/suppruser.php?id=<?php echo $user['id']; ?>"> Supprimer </a> </td>
 
 				</tr>

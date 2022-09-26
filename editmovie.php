@@ -108,8 +108,11 @@ if(!empty($_GET['filmid']))
             </div>
         </div>
 
-    <button type="submit" class="btn btn-primary">Modifier</button>
+    <button type="submit" class="btn-btn-primary">Modifier</button>
 </form></center>
+<div class="retourmediatheque"  style="text-align: center; text-decoration: none; color:black;position:relative; bottom:90px;" >
+	  <a href="mediatheque.php"> Retour </a>
+</div>
 
 </html>
 

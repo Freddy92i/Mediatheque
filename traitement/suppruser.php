@@ -26,14 +26,35 @@
             <form id="suppr" method="get" action="">
                 <p>Êtes vous sur de vouloir supprimer cet utilisateur ?</p>
                 <input type="hidden" name="id" value="<?php echo $id ?>">
-                <input type="submit" name="confirm" value="Oui">
-                <input type="submit" name="confirm" value="Non">
+                <input type="submit" name="confirm" onclick="suppruser()" value="Oui">
+                <input type="submit" name="confirm" onclick="nosuppruser()" value="Non">
             </form>
-
+            <script>
+                function suppruser() {
+                    alert("La suppression du user a été éffectué  ! ");
+                }
+            </script>
+            
+            <script>
+                function nosuppruser() {
+                    alert("La suppression a été annulé ! ");
+                }
+            </script>
+            
+            
+            
+            
             <?php
+            
         }
     } else {
-        $_SESSION['message']='Vous n\'avez pas accès à cette page';
+        ?>
+        <script>
+                function nosuppruser() {
+                    alert("Vous n\'avez pas accès à cette page ! ");
+                }
+            </script>
+        <?php
         header('location: ../admin/home.php');
     }
 
