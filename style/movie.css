@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    background: #090A0D;
+}
+.cover{
+    width: 100%;
+}
+
+.titre{
+    color: #E0E0E0;
+    font-size: large;
+    position: relative;
+    text-align: LEFT;
+    top: -13rem;
+    left: 10%;
+    margin: 0;
+    width: 180px;
+}
+
+.poster{
+    width: 120px;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    top: -15rem;
+    position: relative;
+
+}
+
+.annee{
+    width: 200px;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    top: -22rem;
+    position: relative;
+    left: 10%;
+    padding: 0;
+    margin: 0;
+}
+
+.note{
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -21rem;
+    left: 10%;
+}
+
+.genre{
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -20rem;
+    left: 10%;
+}
+
+.resume{
+    position: relative;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    left: 3%;
+    top: -16rem;
+}
+.resume-titre{
+    color: #E0E0E0;
+    line-height: 1.5;
+    padding: 10px;
+    margin-top: 0;
+    position: relative;
+    top: -15rem;
+    left: 2%;
+}
+
+.credits{
+    color: #E0E0E0;
+    line-height: 1.5;
+    padding: 10px;
+    margin-top: 0;
+    position: relative;
+    top: -15rem;
+    left: 2%;
+}
+
+.realisateur{
+    position: relative;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    left: 3%;
+    top: -16rem;
+}
+
+/* acteurs */
+.actors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -13rem;
+}
+
+.actor-photo {
+    display: block;
+    width: 10rem;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+.actor-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.BA{
+    color: #E0E0E0;
+    line-height: 1.5;
+    padding: 10px;
+    margin-top: 0;
+    position: relative;
+    left: 2%;
+}
+
+.reco{
+    color: #E0E0E0;
+    line-height: 1.5;
+    padding: 10px;
+    margin-top: 0;
+    position: relative;
+    left: 2%;
+}
+.casting{
+    color: #E0E0E0;
+    line-height: 1.5;
+    padding: 10px;
+    margin-top: 0;
+    position: relative;
+    left: 2%;
+    top: -13rem;
+}
+/* Bande Annonce */
+
+.B-A{
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

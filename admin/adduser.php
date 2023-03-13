@@ -5,10 +5,13 @@
 </head>
 <body>
   
-<?php require('../app/connexionpdo.php');
+<?php 
+require('../app/connexionpdo.php');
+include 'config.php';
+
 
 ?>
-<form class="box" action="../traitement/adduser-process.php" method="post">
+<form class="box" action="<?= SITE_URL ?>/connexion/traitement/adduser-process.php" method="post">
   <h1 class="box-logo box-title"></h1>
   <h1 class="box-title">Ajouter des utilisateurs</h1>
 
@@ -21,7 +24,7 @@
 
 </form>
 <div class="retourmediatheque"  style="text-align: center; text-decoration: none" >
-	  <a href="./home.php"> Retour </a>
+	  <a href="<?= SITE_URL ?>/admin/home.php"> Retour </a>
 </div>
 </body>
 </html>

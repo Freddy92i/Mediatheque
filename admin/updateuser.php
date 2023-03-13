@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="<?= SITE_URL ?>/style/style.css" />
 </head>
 <body>
 <?php
 include "../app/connexionpdo.php";
+include '../config.php';
 
-$query = $bdd->prepare("SELECT * FROM information ");
+
+$query = $bdd->prepare("SELECT * FROM User ");
 $ok = $query->execute();
 $result = $query->fetchAll(5);
 
@@ -46,8 +48,8 @@ $result = $query->fetchAll(5);
 					<td> <?php echo $user['prenom']; ?></td>
 					<td> <?php echo $user['nom']; ?></td>
 					<td> <?php echo $user['mail']; ?></td>
-					<td> <a href=" ../traitement/edituser.php?id=<?php echo $user['id']; ?>" class="card-link">Modifier</a></td>
-					<td> <a href=" ../traitement/suppruser.php?id=<?php echo $user['id']; ?>"> Supprimer </a> </td>
+					<td> <a href=" <?= SITE_URL ?>/connexion/traitement/edituser.php?id=<?php echo $user['id']; ?>" class="card-link">Modifier</a></td>
+					<td> <a href=" <?= SITE_URL ?>/connexion/traitement/suppruser.php?id=<?php echo $user['id']; ?>"> Supprimer </a> </td>
 
 				</tr>
 <?php
