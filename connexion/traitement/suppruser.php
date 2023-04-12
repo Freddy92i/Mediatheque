@@ -5,10 +5,9 @@
 <?php
 
     session_start();
-    include('../app/connexionpdo.php');
-    include 'config.php';
-
-    if (!empty($_GET['id'])) // On récupère l'id du film et on le supprime
+    include '../../app/connexionpdo.php';
+    include '../../config.php';
+    if (!empty($_GET['id'])) // On récupère l'id du user que l'on veut supprimer
     {
         $id = $_GET['id'];
 
@@ -18,10 +17,10 @@
                 $statement->execute(array($id));
                 // Création de la session message pour y afficher le message de confirmation
                 $_SESSION['message'] = 'Suppression effectué avec succès';
-                header("location: ../admin/home.php");
+                header("location: ../../admin/home.php");
             } else {
                 $_SESSION['message'] = 'Suppression annulée';
-                header("location: ../admin/home.php");
+                header("location: ../../admin/home.php");
             }
         } else {
             ?>
@@ -57,7 +56,7 @@
                 }
             </script>
         <?php
-        header('location: ../admin/home.php');
+        header('location: ../../admin/home.php');
     }
 
 ?>

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../style/style.css" />
 </head>
 <body>
   
-<?php 
-require('../app/connexionpdo.php');
-include 'config.php';
-
-
+<?php
+include "../app/connexionpdo.php";
+include '../config.php';
 ?>
+
 <form class="box" action="<?= SITE_URL ?>/connexion/traitement/adduser-process.php" method="post">
   <h1 class="box-logo box-title"></h1>
   <h1 class="box-title">Ajouter des utilisateurs</h1>
@@ -24,7 +23,7 @@ include 'config.php';
 
 </form>
 <div class="retourmediatheque"  style="text-align: center; text-decoration: none" >
-	  <a href="<?= SITE_URL ?>/admin/home.php"> Retour </a>
+	  <a class="buttonback" href="<?= SITE_URL ?>/admin/home.php"> Retour </a>
 </div>
 </body>
 </html>

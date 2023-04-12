@@ -1,7 +1,6 @@
 <?php
     include "../app/connexionpdo.php";
-    include 'config.php';
-
+    include '../../config.php';
     session_start();
 
     $mail = $_POST['mail'];

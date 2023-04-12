@@ -1,6 +1,6 @@
 <?php
-    include 'config.php';
-    include "../app/connexionpdo.php";
+    include '../../config.php';
+    include "../../app/connexionpdo.php";
     session_start();
 
     $id = $_POST['id'];

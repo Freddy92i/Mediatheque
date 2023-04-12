@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../../config.php';
 
 if(empty($_COOKIE['id'])) {
     $_SESSION['message']='Veuillez vous inscrire ou vous connecter pour accéder à cette rubrique';

@@ -1,6 +1,5 @@
 <?php
-include 'config.php';
-
+include '../../config.php';
 
 session_start();
 include('../../app/connexionpdo.php');

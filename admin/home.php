@@ -1,3 +1,7 @@
+<?php
+include "../app/connexionpdo.php";
+include '../config.php';
+?>
 
 <html>
   <head>

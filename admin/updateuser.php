@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="<?= SITE_URL ?>/style/style.css" />
+  <link rel="stylesheet" href="../style/style.css" />
 </head>
 <body>
+  
 <?php
 include "../app/connexionpdo.php";
 include '../config.php';
-
 
 $query = $bdd->prepare("SELECT * FROM User ");
 $ok = $query->execute();
@@ -19,7 +19,6 @@ $result = $query->fetchAll(5);
 				$user = array();
 				$user['id'] = $lig->id;
 				$user['mail'] = $lig->mail;
-				$user['mdp'] = $lig->mdp;
 				$user['prenom'] = $lig->prenom;
 				$user['nom'] = $lig->nom;
 				$list_user[] = $user;

@@ -6,7 +6,7 @@
         // $bdd= new PDO('mysql:host=localhost;dbname=mediatheque','pfreddy','aden_pfreddy$2022',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         
         // Local
-         $bdd= new PDO('mysql:host=localhost;dbname=mediatheque_numerique','root','root',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+         $bdd= new PDO('mysql:host=localhost;dbname=mediatheque_numerique','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
     }
     catch(Exception $e)
