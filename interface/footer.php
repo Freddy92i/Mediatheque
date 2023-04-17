@@ -9,7 +9,7 @@
     <div class="footer-dark">
         <footer style="background: black;">
             <div class="container" style="padding-top: 2rem">
-                <div class="row" style="display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px; justify-content: center; gap: 7rem;">
+                <div class="row" style="display: flex; flex-wrap: wrap; margin-left: -15px; justify-content: center; gap: 7rem;">
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Services</h3>
                         <ul style=" display: flex; flex-direction: column; ">

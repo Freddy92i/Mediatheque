@@ -3,8 +3,7 @@ const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 let currentIndex = 0;
-let intervalId = null;
-const intervalTime = 5000;
+
 
 //console.log(slides);
 
@@ -30,17 +29,6 @@ function prevSlide() {
   console.log(carousel.style.transform);
 }
 
-// Set up automatic slideshow
-function startSlideshow() {
-  intervalId = setInterval(() => {
-    nextSlide();
-  }, intervalTime);
-}
-
-// Stop automatic slideshow
-function stopSlideshow() {
-  clearInterval(intervalId);
-}
 
 // Add event listeners to buttons
 nextBtn.addEventListener('click', () => {
@@ -55,5 +43,3 @@ prevBtn.addEventListener('click', () => {
   stopSlideshow();
 });
 
-// Start automatic slideshow
-startSlideshow();  
