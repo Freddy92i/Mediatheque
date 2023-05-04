@@ -45,73 +45,46 @@ echo '</div>';
 
 
 ?>
-<div class="controls">
-    <button class="prev-btn">&lt;</button>
-    <button class="next-btn">&gt;</button>
-  </div>
 
 <script type="text/javascript" src="pages/slider.js"></script> 
 
 
 <style>
   /* Style pour le carrousel */
-  .carousel {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    height: 100vh;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
-  }
-  .carousel a, .carousel a:hover {
-      text-decoration: none;
-  }
-
-  .carousel-card {
-    flex: 0 0 auto;
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .carousel-card-content {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-    color: #E0E0E0;
-    text-align: center;
-    text-decoration: none!important;
-    margin: 1rem 0 0 1rem;
-    border-radius: 2rem
-  }
-  .controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
+.carousel {
   display: flex;
-  justify-content: space-between;
-  z-index: 1;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.carousel a, .carousel a:hover {
+    text-decoration: none;
 }
 
-.prev-btn,
-.next-btn {
-  font-size: 3rem;
-  background-color: transparent;
-  color:#E0E0E0;
-  border: none;
-  cursor: pointer;
-  padding: 0 1rem;
+.carousel-card {
+  flex: 0 0 auto;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
 }
 
-.prev-btn:focus,
-.next-btn:focus {
-  outline: none;
+.carousel-card-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  color: #E0E0E0;
+  text-align: center;
+  text-decoration: none!important;
+  margin: 1rem 0 0 1rem;
+  border-radius: 2rem
 }
+
 </style>

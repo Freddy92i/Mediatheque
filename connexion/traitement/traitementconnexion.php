@@ -54,12 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     //check mail vide
     if(empty(trim($_POST["mail"]))){
-         $mail_err = "entrez un nom d'utilisateur";
+         $mail_err = "entrez votre mail";
     } else{
         $mail = trim($_POST["mail"]);
     }
 
-    // Check  password vide
+    // Check password vide
     if (empty(trim($_POST[ "password"]))){
         $_password_err ="entrez votre mot de passe";
     } else {

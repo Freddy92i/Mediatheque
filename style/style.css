@@ -198,20 +198,7 @@ iframe {
     justify-content: center;
   }
   
-  /* Previous and Next buttons */
-  .pagination-btn {
-    background-color: #E0E0E0;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    margin: 10px 5px;
-    cursor: pointer;
-    border-radius: 10px;
-  }
+
   
   /* Active page button */
   .active-page {

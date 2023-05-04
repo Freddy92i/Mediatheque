@@ -31,16 +31,16 @@
                             <li><a class="textfooter" href="#">Plan du site</a></li>
                             <li>
                             <?php if(empty($_COOKIE['id'])) { 
-                 $user = null;
-                 echo '<a class="textfooter" href="#">Informations </a></div>';
-                 } elseif(isset($_COOKIE['id'])) {
-                include("app/connexionpdo.php");
-                $id = $_COOKIE['id'];
-                $req = $bdd->prepare('SELECT * FROM User WHERE id= :id');
-                $req-> execute(array('id'=>$id));
-                $user = $req->fetch();
-                echo '<ul> <li><a class="textfooter" href="' . SITE_URL . '/admin/home.php">Interface Admin</a></li></ul></div>';
-                } ?>
+                                $user = null;
+                                echo '<a class="textfooter" href="#">Informations </a></div>';
+                                } elseif(isset($_COOKIE['id'])) {
+                                include("app/connexionpdo.php");
+                                $id = $_COOKIE['id'];
+                                $req = $bdd->prepare('SELECT * FROM User WHERE id= :id');
+                                $req-> execute(array('id'=>$id));
+                                $user = $req->fetch();
+                                echo '<ul> <li><a class="textfooter" href="' . SITE_URL . '/admin/home.php">Interface Admin</a></li></ul></div>';
+                            } ?>
                             </li>
                         </ul>
                     </div>

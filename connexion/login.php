@@ -95,7 +95,7 @@ if(isset($_SESSION['message'])) {
 				</div>
 				<div class="group">
 					<label for="password" class="label">mot de passe</label>
-					<input id="password" type="password" name="password" placeholder="Entrer votre mot de passe" class="input" data-type="password">
+					<input id="password" type="password" name="password" placeholder="Entrer votre mot de passe ( au moins 6 caractères)" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="password2" class="label">Répéter le mot de passe</label>

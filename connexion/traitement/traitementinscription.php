@@ -24,6 +24,7 @@ if(isset($_COOKIE['id'])) {
     if (empty($_POST['mail']) OR empty($_POST['password']) OR empty($_POST['prenom']) OR empty($_POST['nom']) OR empty($_POST['password2']) OR strlen($password) < 6) {  // Gestion d'erreur
         // Création de la session message pour y afficher le message d'erreur
         $_SESSION['message'] = 'Erreur de champs';
+        header('location: ../login.php');
     } elseif ($password != $password2) { // Gestion d'erreur pour que les 2 mots de passes correspondent
         // Création de la session message pour y afficher le message d'erreur
         $_SESSION['message'] = 'Les 2 password ne sont pas identiques';
