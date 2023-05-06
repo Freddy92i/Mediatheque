@@ -57,7 +57,6 @@ echo '</div>';
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  height: 100vh;
   width: 100%;
   -webkit-overflow-scrolling: touch;
 }
@@ -68,7 +67,7 @@ echo '</div>';
 .carousel-card {
   flex: 0 0 auto;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
   scroll-snap-align: start;
   display: flex;
   justify-content: flex-start;
