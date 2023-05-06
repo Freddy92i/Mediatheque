@@ -22,7 +22,7 @@ echo "<p><strong>Lieu de naissance :</strong> {$data['place_of_birth']}</p>";
 echo "<h2>Films dans lesquels {$data['name']} a joué</h2>";
 
 // Afficher les films dans lesquels l'acteur a joué
-echo "<ul style='list-style: none;'>";
+echo "<ul style='list-style: none; display: flex; flex-direction: row; flex-wrap: wrap; align-items: stretch ; gap: 1rem; justify-content: space-between;'>";
 foreach($data['movie_credits']['cast'] as $movie) {
     echo "<li>";
     echo "<a href='movie.php?id={$movie['id']}'><img style='width: 100px; height: 150px; object-fit: cover;' src='https://image.tmdb.org/t/p/w300{$movie['poster_path']}' alt='{$movie['title']}'></a>";

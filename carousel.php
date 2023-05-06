@@ -54,7 +54,6 @@ echo '</div>';
 .carousel {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   height: 100vh;
