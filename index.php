@@ -28,8 +28,8 @@ echo '<div style="text-align: center; padding-top: 1rem;"><a class="texte-sf" st
 echo "<ul style='display: flex; list-style: none; overflow-x: scroll;'>";
 foreach($data['results'] as $movie) {
     echo "<li style='margin-right: 25px; text-align: center;'>";
-    echo "<a href='/pages/movie.php?id={$movie['id']}' ><img style='width: 200px;height: 300px;object-fit: cover;border-radius: 10px;' src='https://image.tmdb.org/t/p/w200{$movie['poster_path']}' alt='{$movie['title']}'></a><br>";
-    echo "<a style='text-decoration: none;width: 10rem; margin: auto;' href='/pages/movie.php?id={$movie['id']}'>{$movie['title']}</a>";
+    echo "<a href='pages/movie.php?id={$movie['id']}' ><img style='width: 200px;height: 300px;object-fit: cover;border-radius: 10px;' src='https://image.tmdb.org/t/p/w200{$movie['poster_path']}' alt='{$movie['title']}'></a><br>";
+    echo "<a style='text-decoration: none;width: 10rem; margin: auto;' href='pages/movie.php?id={$movie['id']}'>{$movie['title']}</a>";
     echo "</li>";
 }
 echo "</ul>";
@@ -74,7 +74,7 @@ if (isset($data['results'])) {
         $title = $film['title'];
 
         echo '<li style="margin-right: 10px;">';
-        echo '<a href="/pages/movie.php?id='.$film['id'].'">';
+        echo '<a href="pages/movie.php?id='.$film['id'].'">';
         echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" style="width: 100%; border-radius: 10px;">';
         echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
         echo '</a>';
@@ -141,8 +141,8 @@ echo '<div style="text-align: center; padding-top: 1rem;"><a class="texte-sf" st
 echo "<ul style='display: flex; list-style: none; overflow-x: scroll;'>";
 foreach($data['results'] as $movie) {
     echo "<li style='margin-right: 25px; text-align: center;'>";
-    echo "<a href='/pages/movie.php?id={$movie['id']}' ><img style='width: 200px;height: 300px;object-fit: cover;border-radius: 10px;' src='https://image.tmdb.org/t/p/w500{$movie['poster_path']}' alt='{$movie['title']}'></a><br>";
-    echo "<a style='text-decoration: none;width: 10rem; margin: auto;' href='/pages/movie.php?id={$movie['id']}' >{$movie['title']}</a>";
+    echo "<a href='pages/movie.php?id={$movie['id']}' ><img style='width: 200px;height: 300px;object-fit: cover;border-radius: 10px;' src='https://image.tmdb.org/t/p/w500{$movie['poster_path']}' alt='{$movie['title']}'></a><br>";
+    echo "<a style='text-decoration: none;width: 10rem; margin: auto;' href='pages/movie.php?id={$movie['id']}' >{$movie['title']}</a>";
     echo "</li>";
 }
 echo "</ul>";
