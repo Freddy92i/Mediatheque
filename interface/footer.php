@@ -11,7 +11,7 @@
             <div class="container" style="padding-top: 2rem">
                 <div class="row" style="display: flex; flex-wrap: wrap; margin-left: -15px; justify-content: center; gap: 7rem;">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
+                        <h3 style="color: #E0E0E0" >Services</h3>
                         <ul style=" display: flex; flex-direction: column; ">
                             <li><a class="textfooter" href="#">Films</a></li>
                             <li><a class="textfooter" href="#">Séries TV</a></li>
