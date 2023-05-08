@@ -1,9 +1,6 @@
-<body style="background-color: #131c27;">
-
-<link href="<?= SITE_URL ?>/style/style.css" rel="stylesheet">
-
 <?php
 include '../config.php';
+
 // Clé API TMDB
 $api_key = "819b3b9f2b6ec0428a3888d8c512ba08";
 
