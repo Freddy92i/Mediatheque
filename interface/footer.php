@@ -49,7 +49,7 @@
    
   </div>
                 </div>
-                <p class="copyright" style=" margin-bottom: 0px; ">Médiatheque Numerique © 2023</p>
+                <p class="copyright" style="text-align: center ; margin-bottom: 0px; ">Médiatheque Numerique © 2023</p>
             </div>
         </footer>
     </div>
