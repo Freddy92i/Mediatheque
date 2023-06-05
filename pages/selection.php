@@ -50,7 +50,7 @@ $url .= "&page=1";
 		
 				echo '<li style="margin-right: 10px;">';
 				echo '<a href="<?= SITE_URL ?>/pages/movie.php?id='.$film['id'].'">';
-				echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" style="width: 100%; border-radius: 10px;">';
+				echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" >';
 				echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
 				echo '</a>';
 				echo '</li>';
