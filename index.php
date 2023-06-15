@@ -27,10 +27,16 @@ echo '<div style="text-align: center; padding-top: 1rem;"><a class="texte-sf" st
 
 echo "<ul style='display: flex; list-style: none; overflow-x: scroll;'>";
 foreach($data['results'] as $movie) {
-    echo "<li style='margin-right: 25px; text-align: center;'>";
-    echo "<a href='pages/movie.php?id={$movie['id']}' ><img style='width: 200px;height: 300px;object-fit: cover;border-radius: 10px;' src='https://image.tmdb.org/t/p/w200{$movie['poster_path']}' alt='{$movie['title']}'></a><br>";
-    echo "<a style='text-decoration: none;width: 10rem; margin: auto;' href='pages/movie.php?id={$movie['id']}'>{$movie['title']}</a>";
-    echo "</li>";
+    $posterPath = "https://image.tmdb.org/t/p/w200{$movie['poster_path']}";
+    
+    // Vérifier si l'image existe
+    $imageInfo = @getimagesize($posterPath);
+    if ($imageInfo !== false) {
+        echo "<li style='margin-right: 25px; text-align: center;'>";
+        echo "<a href='pages/movie.php?id={$movie['id']}' ><img style='width: 200px;height: 300px;object-fit: cover;border-radius: 10px;' src='$posterPath' alt='{$movie['title']}'></a><br>";
+        echo "<a style='text-decoration: none;width: 10rem; margin: auto;' href='pages/movie.php?id={$movie['id']}'>{$movie['title']}</a>";
+        echo "</li>";
+    }
 }
 echo "</ul>";
 
@@ -72,21 +78,27 @@ if (isset($data['results'])) {
     foreach ($films as $film) {
         $poster = "https://image.tmdb.org/t/p/w200/{$film['poster_path']}";
         $title = $film['title'];
-
-        echo '<li style="margin-right: 10px;">';
-        echo '<a href="pages/movie.php?id='.$film['id'].'">';
-        echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" ">';
-        echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
-        echo '</a>';
-        echo '</li>';
+    
+        // Vérifier si l'image existe
+        $imageInfo = @getimagesize($poster);
+        if ($imageInfo !== false) {
+            echo '<li style="margin-right: 10px;">';
+            echo '<a href="pages/movie.php?id='.$film['id'].'">';
+            echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'">';
+            echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
+            echo '</a>';
+            echo '</li>';
+        }
+        // bloc pour verifier si l'image existe
     }
-
+    
     if (count($data['results']) > 5) {
         $count = count($data['results']) - 5;
         echo '<li style="margin-right: 10px;">';
         echo '<div style="border: solid black;background: black;width: 100%;height: 91%;border-radius: 10px;text-align: center;color: #fff;display: flex;flex-direction: column;justify-content: center;">+'.$count.' films de science-fiction</div>';
         echo '</li>';
     }
+    
 
     echo '</ul>';
     echo '</div>';

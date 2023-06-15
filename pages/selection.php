@@ -47,14 +47,22 @@ $url .= "&page=1";
 			foreach ($films as $film) {
 				$poster = "https://image.tmdb.org/t/p/w200/{$film['poster_path']}";
 				$title = $film['title'];
-		
-				echo '<li style="margin-right: 10px;">';
-				echo '<a href="<?= SITE_URL ?>/pages/movie.php?id='.$film['id'].'">';
-				echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" >';
-				echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
-				echo '</a>';
-				echo '</li>';
+			
+				// Vérifier si l'image existe
+				$imageInfo = @getimagesize($poster);
+				if ($imageInfo !== false) {
+					echo '<li style="margin-right: 10px;">';
+					echo '<a href="pages/movie.php?id='.$film['id'].'">';
+					echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'">';
+					echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
+					echo '</a>';
+					echo '</li>';
+				}
+				// fin de bloc 
 			}
+		
+			
+			
 		
 			if (count($data['results']) > 5) {
 				$count = count($data['results']) - 5;
@@ -110,13 +118,18 @@ if (isset($data['results'])) {
 	foreach ($films as $film) {
 		$poster = "https://image.tmdb.org/t/p/w200/{$film['poster_path']}";
 		$title = $film['title'];
-
-		echo '<li style="margin-right: 10px;">';
-		echo '<a href="<?= SITE_URL ?>/pages/movie.php?id='.$film['id'].'">';
-		echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" style="width: 100%; border-radius: 10px;">';
-		echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
-		echo '</a>';
-		echo '</li>';
+	
+		// Vérifier si l'image existe
+		$imageInfo = @getimagesize($poster);
+		if ($imageInfo !== false) {
+			echo '<li style="margin-right: 10px;">';
+			echo '<a href="pages/movie.php?id='.$film['id'].'">';
+			echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'">';
+			echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
+			echo '</a>';
+			echo '</li>';
+		}
+		// fin de bloc 
 	}
 
 	if (count($data['results']) > 5) {
@@ -178,13 +191,18 @@ if (isset($data['results'])) {
 	foreach ($films as $film) {
 		$poster = "https://image.tmdb.org/t/p/w200/{$film['poster_path']}";
 		$title = $film['title'];
-
-		echo '<li style="margin-right: 10px;">';
-		echo '<a href="<?= SITE_URL ?>/pages/movie.php?id='.$film['id'].'">';
-		echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" style="width: 100%; border-radius: 10px;">';
-		echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
-		echo '</a>';
-		echo '</li>';
+	
+		// Vérifier si l'image existe
+		$imageInfo = @getimagesize($poster);
+		if ($imageInfo !== false) {
+			echo '<li style="margin-right: 10px;">';
+			echo '<a href="pages/movie.php?id='.$film['id'].'">';
+			echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'">';
+			echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
+			echo '</a>';
+			echo '</li>';
+		}
+		// fin de bloc 
 	}
 
 	if (count($data['results']) > 5) {
@@ -248,13 +266,18 @@ if (isset($data['results'])) {
 	foreach ($films as $film) {
 		$poster = "https://image.tmdb.org/t/p/w200/{$film['poster_path']}";
 		$title = $film['title'];
-
-		echo '<li style="margin-right: 10px;">';
-		echo '<a href="<?= SITE_URL ?>/pages/movie.php?id='.$film['id'].'">';
-		echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" style="width: 100%; border-radius: 10px;">';
-		echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
-		echo '</a>';
-		echo '</li>';
+	
+		// Vérifier si l'image existe
+		$imageInfo = @getimagesize($poster);
+		if ($imageInfo !== false) {
+			echo '<li style="margin-right: 10px;">';
+			echo '<a href="pages/movie.php?id='.$film['id'].'">';
+			echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'">';
+			echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
+			echo '</a>';
+			echo '</li>';
+		}
+		// fin de bloc 
 	}
 
 	if (count($data['results']) > 5) {
@@ -319,13 +342,18 @@ if (isset($data['results'])) {
 	foreach ($films as $film) {
 		$poster = "https://image.tmdb.org/t/p/w200/{$film['poster_path']}";
 		$title = $film['title'];
-
-		echo '<li style="margin-right: 10px;">';
-		echo '<a href="<?= SITE_URL ?>/pages/movie.php?id='.$film['id'].'">';
-		echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'" style="width: 100%; border-radius: 10px;">';
-		echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
-		echo '</a>';
-		echo '</li>';
+	
+		// Vérifier si l'image existe
+		$imageInfo = @getimagesize($poster);
+		if ($imageInfo !== false) {
+			echo '<li style="margin-right: 10px;">';
+			echo '<a href="pages/movie.php?id='.$film['id'].'">';
+			echo '<img class="affiche-film" src="'.$poster.'" alt="'.$title.'">';
+			echo '<div style="text-align: center; color: #E0E0E0 ; margin-top: 5px;">'.$title.'</div>';
+			echo '</a>';
+			echo '</li>';
+		}
+		// fin de bloc 
 	}
 
 	if (count($data['results']) > 5) {
